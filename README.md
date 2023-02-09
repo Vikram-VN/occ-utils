@@ -1,4 +1,4 @@
-# mOCC Fields Mapping
+# OCC Fields Mapping
 
 * After cloning the repository do the yarn/npm install
 * Add your instance link and access token to startMapping.js file
