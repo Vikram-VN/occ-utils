@@ -1,4 +1,4 @@
-# OCC Fields Mapping
+# OCC Product Field values update
 
 * After cloning the repository do the yarn/npm install
 * Add your instance link and access token to startMapping.js file
