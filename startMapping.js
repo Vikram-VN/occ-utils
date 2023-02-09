@@ -45,11 +45,11 @@ const startProductMapping = async (productId, tileId, type = 0) => {
             }
         }).then(res => res.data);
 
-        setTileData[fields[type]] && fs.appendFileSync("success-list.txt", productId + "\r\n")
+        setTileData[fields[type]] && fs.appendFileSync("success-list.log", productId + "\r\n")
         console.log(productId + " -> " + setTileData[fields[type]] + "\r\n");
 
     } catch (e) {
-        fs.appendFileSync("error-list.txt", productId + " -> " + e.response?.data?.message + "\r\n")
+        fs.appendFileSync("error-list.log", productId + " -> " + e.response?.data?.message + "\r\n")
         console.log(productId + " -> " + e.response?.data?.message + "\r\n");
     }
 }
