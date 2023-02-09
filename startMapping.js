@@ -1,10 +1,10 @@
 const axios = require("axios");
 const fs = require("fs");
 
-const INSTANCE_URL = "https://{keep_instance_id_here}-admin.occa.ocs.oraclecloud.com"; //Change the link with your instance link
-const AUTH_TOKEN = "access_token"; // Authorization token 
+const INSTANCE_URL = "https://test-admin.occa.ocs.oraclecloud.com"; //Change the link with your instance link
+const AUTH_TOKEN = ""; // Authorization token 
 
-const startProductMapping = async (productId, tileId, type = 0) => {
+const startProductMapping = async (productId, tileId, type = 0, wait = false) => {
 
     const fields = ["x_refuseRSP", "x_mixerRSP"]; //Fields that you want to map
 
@@ -35,7 +35,7 @@ const startProductMapping = async (productId, tileId, type = 0) => {
             url: `/ccadminui/v1/products/${productId}?includePrices=false`,
             data: {
                 properties: {
-                    [fields[type]]: newPayload
+                    [fields[type]]: wait ? newPayload : ""
                 }
             },
             headers: {
@@ -44,23 +44,26 @@ const startProductMapping = async (productId, tileId, type = 0) => {
                 "Authorization": `Bearer ${AUTH_TOKEN}`
             }
         }).then(res => res.data);
-
-        setTileData[fields[type]] && fs.appendFileSync("success-list.log", productId + "\r\n")
-        console.log(productId + " -> " + setTileData[fields[type]] + "\r\n");
+        const log = fields[type] + " -> " + productId + " -> " + setTileData[fields[type]] + "|" + INSTANCE_URL + "\r\n";
+        setTileData[fields[type]] && fs.appendFileSync("success-list.log", log, { encoding: "utf-8" })
+        console.log(fields[type], " -> ", productId + " -> " + setTileData[fields[type]] + "\r\n");
 
     } catch (e) {
-        fs.appendFileSync("error-list.log", productId + " -> " + e.response?.data?.message + "\r\n")
-        console.log(productId + " -> " + e.response?.data?.message + "\r\n");
+        const log = fields[type] + " -> " + productId + " -> " + e.response?.data?.message + "|" + INSTANCE_URL + "\r\n"
+        fs.appendFileSync("error-list.log", log, { encoding: "utf-8" })
+        console.log(fields[type], " -> ", productId + " -> " + e.response?.data?.message + "\r\n");
     }
 }
 
 
-
-const productsData = JSON.parse(fs.readFileSync("./data/mixer.json", { encoding: "utf-8" })); // Getting json file data 
+const site = 1; // 0 is refuse & 1 is mixer
+const wait = true;
+const file = ["./data/refuse.json", "./data/mixer.json"][site]
+const productsData = JSON.parse(fs.readFileSync(file, { encoding: "utf-8" })); // Getting json file data 
 
 productsData.map((data, index) => {
     setTimeout(() => {
         console.log("Now running: ", index, "\r\n")
-        startProductMapping(data.Item, data["Product Model"].toUpperCase().replace(new RegExp(" ", "g"), "_") + "|", 1);
-    }, 5000 * index);
+        startProductMapping(data.Item, data["Product Model"].toUpperCase().replace(new RegExp(" ", "g"), "_") + "|", site, wait);
+    }, 5000 * (wait && index));
 })
