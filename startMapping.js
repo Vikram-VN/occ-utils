@@ -50,15 +50,15 @@ const startProductMapping = async (productId, tileId, type = 0, wait = false) =>
         console.log("CatalogId -> " + catalogs[type] + " ->" + fields[type] + " -> " + productId + " -> " + setTileData[fields[type]]  + " -> " + INSTANCE_URL + "\r\n");
 
     } catch (e) {
-        const log = "CatalogId -> " + catalogs[type] + " ->" + fields[type] + " -> " + productId + " -> " + e.response?.data?.message +  " -> " + newPayload + " -> " + INSTANCE_URL + "\r\n";
+        const log = "CatalogId -> " + catalogs[type] + " ->" + fields[type] + " -> " + productId + " -> " + e.response?.data?.message +  " -> " + tileId + " -> " + INSTANCE_URL + "\r\n";
         fs.appendFileSync("error-list.log", log, { encoding: "utf-8" })
-        console.log("CatalogId -> " + catalogs[type] + " ->" + fields[type] + " -> " + productId + " -> " + e.response?.data?.message +  " -> " + newPayload + " -> " + INSTANCE_URL + "\r\n");
+        console.log("CatalogId -> " + catalogs[type] + " ->" + fields[type] + " -> " + productId + " -> " + e.response?.data?.message +  " -> " + tileId + " -> " + INSTANCE_URL + "\r\n");
     }
 }
 
 
 const site = 1; // 0 is refuse & 1 is mixer
-const wait = true;
+const wait = false;
 const file = ["./data/refuse.json", "./data/mixer.json"][site]
 const productsData = JSON.parse(fs.readFileSync(file, { encoding: "utf-8" })); // Getting json file data 
 
