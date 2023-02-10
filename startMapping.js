@@ -45,14 +45,14 @@ const startProductMapping = async (productId, tileId, type = 0, wait = false) =>
                 "Authorization": `Bearer ${AUTH_TOKEN}`
             }
         }).then(res => res.data);
-        const log = "CatalogId -> " + catalogs[type] + " -> " + fields[type] + " -> " + productId + " -> " + setTileData[fields[type]]  + " -> " + INSTANCE_URL + "\r\n";
+        const log = "Details -> " + catalogs[type] + " -> " + fields[type] + " -> " + productId + " -> " + setTileData[fields[type]]  + " -> " + INSTANCE_URL + "\r\n";
         setTileData[fields[type]] && fs.appendFileSync("success-list.log", log, { encoding: "utf-8" })
-        console.log("CatalogId -> " + catalogs[type] + " ->" + fields[type] + " -> " + productId + " -> " + setTileData[fields[type]]  + " -> " + INSTANCE_URL + "\r\n");
+        console.log("Details -> " + catalogs[type] + " ->" + fields[type] + " -> " + productId + " -> " + setTileData[fields[type]]  + " -> " + INSTANCE_URL + "\r\n");
 
     } catch (e) {
-        const log = "CatalogId -> " + catalogs[type] + " -> " + fields[type] + " -> " + productId + " -> " + e.response?.data?.message +  " -> " + tileId + " -> " + INSTANCE_URL + "\r\n";
+        const log = "Details -> " + catalogs[type] + " -> " + fields[type] + " -> " + productId + " -> " + e.response?.data?.message +  " -> " + tileId + " -> " + INSTANCE_URL + "\r\n";
         fs.appendFileSync("error-list.log", log, { encoding: "utf-8" })
-        console.log("CatalogId -> " + catalogs[type] + " -> " + fields[type] + " -> " + productId + " -> " + e.response?.data?.message +  " -> " + tileId + " -> " + INSTANCE_URL + "\r\n");
+        console.log("Details -> " + catalogs[type] + " -> " + fields[type] + " -> " + productId + " -> " + e.response?.data?.message +  " -> " + tileId + " -> " + INSTANCE_URL + "\r\n");
     }
 }
 
