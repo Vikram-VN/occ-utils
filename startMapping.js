@@ -57,8 +57,8 @@ const startProductMapping = async (productId, tileId, type = 0, wait = false) =>
 }
 
 
-const site = 1; // 0 is refuse & 1 is mixer
-const wait = false;
+const site = 0; // 0 is refuse & 1 is mixer
+const wait = true;
 const file = ["./data/refuse.json", "./data/mixer.json"][site]
 const productsData = JSON.parse(fs.readFileSync(file, { encoding: "utf-8" })); // Getting json file data 
 
