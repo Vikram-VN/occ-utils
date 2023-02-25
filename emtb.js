@@ -5,14 +5,16 @@ const folders = fs.readdirSync("./templates", { encoding: "utf-8" });
 const dataTypes = {
   array: {},
   object: {},
-  list: [{}],
+  items: [{}],
   null: null,
   integer: 0,
   number: 0,
   double: 0.0,
   boolean: false,
-  string: "",
+  string: ""
 }
+
+const listItems = ["items"];
 
 const processData = (json, data, filtered = false, prevKey) => {
   let payload;
@@ -26,7 +28,7 @@ const processData = (json, data, filtered = false, prevKey) => {
   if (payload.length >= 2) {
     const dataType = payload[1].trim();
     const key = payload[0].trim();
-    const value = dataTypes[(dataType.includes("array") ? "list" : dataType).toLowerCase()];
+    const value = dataTypes[(listItems.includes(key) ? "items" : dataType).toLowerCase()];
     switch (dataType) {
       case "string":
       case "boolean":
@@ -47,7 +49,7 @@ const processData = (json, data, filtered = false, prevKey) => {
       default:
         // Removing 2 items from the array list (because we already used those)
         const newPayload = payload.slice(2);
-        if (dataType.toLowerCase().includes("array")) {
+        if (listItems.includes(key)) {
           processData(json[key] = value, newPayload, true, key);
         } else {
           processData(json[key] = value, newPayload, true);

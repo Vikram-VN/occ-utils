@@ -3,9 +3,34 @@
     "lastJobRunTime": "",
     "currentTime": "",
     "adminURL": "",
-    "profileRequests": [
-        {
-            "items": ""
-        }
-    ]
+    "profileRequests": {
+        "items": [
+            {
+                "imageLocation": "",
+                "propertyId": "",
+                "name": "",
+                "optionName": "",
+                "addOnItem": false,
+                "title": "",
+                "shippingMethods": "",
+                "paymentType": "",
+                "amount": "",
+                "id": ""
+            }
+        ],
+        "payments": [
+            {
+                "imageLocation": "",
+                "propertyId": "",
+                "name": "",
+                "optionName": "",
+                "addOnItem": false,
+                "title": "",
+                "shippingMethods": "",
+                "paymentType": "",
+                "amount": "",
+                "id": ""
+            }
+        ]
+    }
 }

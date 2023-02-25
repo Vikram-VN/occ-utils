@@ -8,7 +8,16 @@
     "resetPasswordLink": "",
     "id": "",
     "locale": "",
-    "recommendations": [
-        {}
-    ]
+    "recommendations": {
+        "items": [
+            {
+                "imageLocation": "",
+                "propertyId": "",
+                "name": "",
+                "optionName": "",
+                "addOnItem": false,
+                "title": ""
+            }
+        ]
+    }
 }
