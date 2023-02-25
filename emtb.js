@@ -60,12 +60,14 @@ const processData = (json, data, filtered = false, prevKey) => {
 
 const processEmailTemplate = data => {
   const newData = data.split("data.").slice(1);
+  // Deleting the json from memory to avoid duplicate data ( :) )
+  delete json;
   const json = {};
   // Converting string object into array list and iterating using map method
   newData.map(data => processData(json, data.replace(/\n/g, "")));
   return json; // Add return statement to return the processed JSON object
 }
-folders.map((folder, index) => {
+folders.slice(10,11).forEach((folder, index) => {
   const data = fs.readFileSync(`./templates/${folder}/Readme.txt`, { encoding: "utf-8" });
   try {
     const jsonObject = processEmailTemplate(data);
