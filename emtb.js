@@ -14,7 +14,7 @@ const dataTypes = {
   string: ""
 }
 
-const listItems = ["items"];
+const listItems = ["items", "payments", "shippingAddress", "shippingMethod", "shippingPriceInfo", "storeAddress", "priceInfo"];
 
 const processData = (json, data, filtered = false, prevKey) => {
   let payload;
@@ -28,7 +28,7 @@ const processData = (json, data, filtered = false, prevKey) => {
   if (payload.length >= 2) {
     const dataType = payload[1].trim();
     const key = payload[0].trim();
-    const value = dataTypes[(listItems.includes(key) ? "items" : dataType).toLowerCase()];
+    const value = dataTypes[(listItems.includes(key) && dataType.toLowerCase() !== "string" ? "items" : dataType).toLowerCase()];
     switch (dataType) {
       case "string":
       case "boolean":
@@ -65,11 +65,11 @@ const processEmailTemplate = data => {
   newData.map(data => processData(json, data.replace(/\n/g, "")));
   return json; // Add return statement to return the processed JSON object
 }
-folders.map(folder => {
+folders.map((folder, index) => {
   const data = fs.readFileSync(`./templates/${folder}/Readme.txt`, { encoding: "utf-8" });
   try {
     const jsonObject = processEmailTemplate(data);
-    console.log(folder, '\r\n')
+    console.log(index + ") " + folder, '\r\n')
     fs.writeFileSync(`./json/${folder}.json`, JSON.stringify(jsonObject, null, 4), { encoding: "utf-8" })
   } catch (e) {
     console.log(e)

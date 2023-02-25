@@ -12,9 +12,14 @@
                 "optionName": "",
                 "addOnItem": false,
                 "title": "",
+                "total": "",
+                "value": "",
+                "firstName": "",
                 "shippingMethods": "",
+                "rawTotalPrice": "",
                 "paymentType": "",
                 "amount": "",
+                "address1": "",
                 "id": "",
                 "frequency": ""
             }
@@ -27,9 +32,14 @@
                 "optionName": "",
                 "addOnItem": false,
                 "title": "",
+                "total": "",
+                "value": "",
+                "firstName": "",
                 "shippingMethods": "",
+                "rawTotalPrice": "",
                 "paymentType": "",
                 "amount": "",
+                "address1": "",
                 "id": "",
                 "frequency": ""
             }

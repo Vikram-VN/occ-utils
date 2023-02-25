@@ -1,172 +1,8 @@
 {
-    "storefrontUrl": "",
     "sitename": "",
     "firstName": "",
-    "locale": "",
     "email": "",
-    "orderDetails": {
-        "name": "",
-        "logoUrl": "",
-        "taxReferenceNumber": "",
-        "vatReferenceNumber": "",
-        "taxExemptionCode": "",
-        "label": "",
-        "displayValue": "",
-        "value": "",
-        "actionCode": "",
-        "recurringCharge": "",
-        "externalRecurringCharge": 0,
-        "externalRecurringChargeFrequency": "",
-        "externalRecurringChargeDuration": "",
-        "previousPrice": "",
-        "variants": {
-            "items": [
-                {
-                    "imageLocation": "",
-                    "propertyId": "",
-                    "name": "",
-                    "optionName": "",
-                    "addOnItem": false,
-                    "title": "",
-                    "total": "",
-                    "value": "",
-                    "firstName": "",
-                    "shippingMethods": "",
-                    "rawTotalPrice": "",
-                    "paymentType": "",
-                    "amount": ""
-                }
-            ],
-            "payments": [
-                {
-                    "imageLocation": "",
-                    "propertyId": "",
-                    "name": "",
-                    "optionName": "",
-                    "addOnItem": false,
-                    "title": "",
-                    "total": "",
-                    "value": "",
-                    "firstName": "",
-                    "shippingMethods": "",
-                    "rawTotalPrice": "",
-                    "paymentType": "",
-                    "amount": ""
-                }
-            ]
-        },
-        "activationDate": "",
-        "deactivationDate": "",
-        "transactionDate": "",
-        "serviceId": "",
-        "assetKey": "",
-        "rootAssetKey": "",
-        "parentAssetKey": "",
-        "customerAccountId": "",
-        "billingAccountId": "",
-        "billingProfileId": "",
-        "serviceAccountId": "",
-        "id": "",
-        "creationDate": "",
-        "creationTime": "",
-        "orderItems": {
-            "items": [
-                {
-                    "imageLocation": "",
-                    "propertyId": "",
-                    "name": "",
-                    "optionName": "",
-                    "addOnItem": false,
-                    "title": "",
-                    "total": "",
-                    "value": "",
-                    "firstName": "",
-                    "shippingMethods": "",
-                    "rawTotalPrice": "",
-                    "paymentType": "",
-                    "amount": ""
-                }
-            ],
-            "payments": [
-                {
-                    "imageLocation": "",
-                    "propertyId": "",
-                    "name": "",
-                    "optionName": "",
-                    "addOnItem": false,
-                    "title": "",
-                    "total": "",
-                    "value": "",
-                    "firstName": "",
-                    "shippingMethods": "",
-                    "rawTotalPrice": "",
-                    "paymentType": "",
-                    "amount": ""
-                }
-            ]
-        },
-        "firstName": "",
-        "lastName": "",
-        "prefix": "",
-        "suffix": "",
-        "address1": "",
-        "address2": "",
-        "address3": "",
-        "city": "",
-        "county": "",
-        "state": "",
-        "postalCode": "",
-        "country": "",
-        "dynamicProperties": {
-            "items": [
-                {
-                    "imageLocation": "",
-                    "propertyId": "",
-                    "name": "",
-                    "optionName": "",
-                    "addOnItem": false,
-                    "title": "",
-                    "total": "",
-                    "value": "",
-                    "firstName": "",
-                    "shippingMethods": "",
-                    "rawTotalPrice": "",
-                    "paymentType": "",
-                    "amount": ""
-                }
-            ],
-            "payments": [
-                {
-                    "imageLocation": "",
-                    "propertyId": "",
-                    "name": "",
-                    "optionName": "",
-                    "addOnItem": false,
-                    "title": "",
-                    "total": "",
-                    "value": "",
-                    "firstName": "",
-                    "shippingMethods": "",
-                    "rawTotalPrice": "",
-                    "paymentType": "",
-                    "amount": ""
-                }
-            ]
-        },
-        "suggestedOrderRefund": "",
-        "actualTaxRefund": "",
-        "otherRefund": "",
-        "suggestedTaxRefund": "",
-        "suggestedTotalRefund": "",
-        "refundDue": "",
-        "refundDuePrimaryCurrency": "",
-        "refundDueSecondaryCurrency": "",
-        "actualShippingRefund": "",
-        "returnFee": "",
-        "suggestedShippingRefund": "",
-        "cardNumber": "",
-        "email": ""
-    },
+    "siteNames": "",
     "organization": {
         "name": "",
         "logoUrl": "",
@@ -197,7 +33,10 @@
                     "shippingMethods": "",
                     "rawTotalPrice": "",
                     "paymentType": "",
-                    "amount": ""
+                    "amount": "",
+                    "address1": "",
+                    "id": "",
+                    "frequency": ""
                 }
             ],
             "payments": [
@@ -214,7 +53,10 @@
                     "shippingMethods": "",
                     "rawTotalPrice": "",
                     "paymentType": "",
-                    "amount": ""
+                    "amount": "",
+                    "address1": "",
+                    "id": "",
+                    "frequency": ""
                 }
             ]
         },
@@ -232,42 +74,7 @@
         "id": "",
         "creationDate": "",
         "creationTime": "",
-        "orderItems": {
-            "items": [
-                {
-                    "imageLocation": "",
-                    "propertyId": "",
-                    "name": "",
-                    "optionName": "",
-                    "addOnItem": false,
-                    "title": "",
-                    "total": "",
-                    "value": "",
-                    "firstName": "",
-                    "shippingMethods": "",
-                    "rawTotalPrice": "",
-                    "paymentType": "",
-                    "amount": ""
-                }
-            ],
-            "payments": [
-                {
-                    "imageLocation": "",
-                    "propertyId": "",
-                    "name": "",
-                    "optionName": "",
-                    "addOnItem": false,
-                    "title": "",
-                    "total": "",
-                    "value": "",
-                    "firstName": "",
-                    "shippingMethods": "",
-                    "rawTotalPrice": "",
-                    "paymentType": "",
-                    "amount": ""
-                }
-            ]
-        },
+        "orderItems": null,
         "firstName": "",
         "lastName": "",
         "prefix": "",
@@ -295,7 +102,10 @@
                     "shippingMethods": "",
                     "rawTotalPrice": "",
                     "paymentType": "",
-                    "amount": ""
+                    "amount": "",
+                    "address1": "",
+                    "id": "",
+                    "frequency": ""
                 }
             ],
             "payments": [
@@ -312,7 +122,10 @@
                     "shippingMethods": "",
                     "rawTotalPrice": "",
                     "paymentType": "",
-                    "amount": ""
+                    "amount": "",
+                    "address1": "",
+                    "id": "",
+                    "frequency": ""
                 }
             ]
         },
@@ -328,11 +141,11 @@
         "returnFee": "",
         "suggestedShippingRefund": "",
         "cardNumber": "",
-        "email": ""
-    },
-    "returnRequestId": "",
-    "returnItems": {
-        "items": [
+        "email": "",
+        "phoneNumber": "",
+        "middleName": "",
+        "emailAddress": "",
+        "storeAddress": [
             {
                 "imageLocation": "",
                 "propertyId": "",
@@ -346,10 +159,14 @@
                 "shippingMethods": "",
                 "rawTotalPrice": "",
                 "paymentType": "",
-                "amount": ""
+                "amount": "",
+                "address1": "",
+                "id": "",
+                "frequency": ""
             }
         ],
-        "payments": [
+        "surcharge": "",
+        "priceInfo": [
             {
                 "imageLocation": "",
                 "propertyId": "",
@@ -363,26 +180,18 @@
                 "shippingMethods": "",
                 "rawTotalPrice": "",
                 "paymentType": "",
-                "amount": ""
+                "amount": "",
+                "address1": "",
+                "id": "",
+                "frequency": ""
             }
-        ]
-    },
-    "refundInfo": {
-        "name": "",
-        "logoUrl": "",
-        "taxReferenceNumber": "",
-        "vatReferenceNumber": "",
-        "taxExemptionCode": "",
-        "label": "",
-        "displayValue": "",
-        "value": "",
-        "actionCode": "",
-        "recurringCharge": "",
-        "externalRecurringCharge": 0,
-        "externalRecurringChargeFrequency": "",
-        "externalRecurringChargeDuration": "",
-        "previousPrice": "",
-        "variants": {
+        ],
+        "recurringChargeSubtotal": "",
+        "recurringChargeDiscount": "",
+        "recurringChargeTax": "",
+        "recurringChargeShipping": "",
+        "recurringChargeTotal": "",
+        "recurringChargeTotalByFrequency": {
             "items": [
                 {
                     "imageLocation": "",
@@ -397,7 +206,10 @@
                     "shippingMethods": "",
                     "rawTotalPrice": "",
                     "paymentType": "",
-                    "amount": ""
+                    "amount": "",
+                    "address1": "",
+                    "id": "",
+                    "frequency": ""
                 }
             ],
             "payments": [
@@ -414,25 +226,14 @@
                     "shippingMethods": "",
                     "rawTotalPrice": "",
                     "paymentType": "",
-                    "amount": ""
+                    "amount": "",
+                    "address1": "",
+                    "id": "",
+                    "frequency": ""
                 }
             ]
         },
-        "activationDate": "",
-        "deactivationDate": "",
-        "transactionDate": "",
-        "serviceId": "",
-        "assetKey": "",
-        "rootAssetKey": "",
-        "parentAssetKey": "",
-        "customerAccountId": "",
-        "billingAccountId": "",
-        "billingProfileId": "",
-        "serviceAccountId": "",
-        "id": "",
-        "creationDate": "",
-        "creationTime": "",
-        "orderItems": {
+        "externalData": {
             "items": [
                 {
                     "imageLocation": "",
@@ -447,7 +248,10 @@
                     "shippingMethods": "",
                     "rawTotalPrice": "",
                     "paymentType": "",
-                    "amount": ""
+                    "amount": "",
+                    "address1": "",
+                    "id": "",
+                    "frequency": ""
                 }
             ],
             "payments": [
@@ -464,23 +268,14 @@
                     "shippingMethods": "",
                     "rawTotalPrice": "",
                     "paymentType": "",
-                    "amount": ""
+                    "amount": "",
+                    "address1": "",
+                    "id": "",
+                    "frequency": ""
                 }
             ]
         },
-        "firstName": "",
-        "lastName": "",
-        "prefix": "",
-        "suffix": "",
-        "address1": "",
-        "address2": "",
-        "address3": "",
-        "city": "",
-        "county": "",
-        "state": "",
-        "postalCode": "",
-        "country": "",
-        "dynamicProperties": {
+        "newOrganizationAndRoles": {
             "items": [
                 {
                     "imageLocation": "",
@@ -495,7 +290,10 @@
                     "shippingMethods": "",
                     "rawTotalPrice": "",
                     "paymentType": "",
-                    "amount": ""
+                    "amount": "",
+                    "address1": "",
+                    "id": "",
+                    "frequency": ""
                 }
             ],
             "payments": [
@@ -512,84 +310,142 @@
                     "shippingMethods": "",
                     "rawTotalPrice": "",
                     "paymentType": "",
-                    "amount": ""
+                    "amount": "",
+                    "address1": "",
+                    "id": "",
+                    "frequency": ""
                 }
             ]
         },
-        "suggestedOrderRefund": "",
-        "actualTaxRefund": "",
-        "otherRefund": "",
-        "suggestedTaxRefund": "",
-        "suggestedTotalRefund": "",
-        "refundDue": "",
-        "refundDuePrimaryCurrency": "",
-        "refundDueSecondaryCurrency": "",
-        "actualShippingRefund": "",
-        "returnFee": "",
-        "suggestedShippingRefund": "",
-        "cardNumber": "",
-        "email": ""
-    },
-    "payments": [
-        {
-            "imageLocation": "",
-            "propertyId": "",
-            "name": "",
-            "optionName": "",
-            "addOnItem": false,
-            "title": "",
-            "total": "",
-            "value": "",
-            "firstName": "",
-            "shippingMethods": "",
-            "rawTotalPrice": "",
-            "paymentType": "",
-            "amount": ""
+        "default": false,
+        "sites": {
+            "items": [
+                {
+                    "imageLocation": "",
+                    "propertyId": "",
+                    "name": "",
+                    "optionName": "",
+                    "addOnItem": false,
+                    "title": "",
+                    "total": "",
+                    "value": "",
+                    "firstName": "",
+                    "shippingMethods": "",
+                    "rawTotalPrice": "",
+                    "paymentType": "",
+                    "amount": "",
+                    "address1": "",
+                    "id": "",
+                    "frequency": ""
+                }
+            ],
+            "payments": [
+                {
+                    "imageLocation": "",
+                    "propertyId": "",
+                    "name": "",
+                    "optionName": "",
+                    "addOnItem": false,
+                    "title": "",
+                    "total": "",
+                    "value": "",
+                    "firstName": "",
+                    "shippingMethods": "",
+                    "rawTotalPrice": "",
+                    "paymentType": "",
+                    "amount": "",
+                    "address1": "",
+                    "id": "",
+                    "frequency": ""
+                }
+            ]
+        },
+        "site": "",
+        "approverComments": "",
+        "profile": "",
+        "daytimeTelephoneNumber": "",
+        "adminPageLocation": "",
+        "siteLocation": "",
+        "orgId": "",
+        "relatedOrganizationName": "",
+        "createdTime": "",
+        "preOrderedQuantity": 0,
+        "backOrderedQuantity": 0,
+        "availabilityDate": "",
+        "title": "",
+        "description": "",
+        "longDescription": "",
+        "productId": "",
+        "brand": "",
+        "productTaxCode": "",
+        "price": "",
+        "listPrice": "",
+        "onSale": "",
+        "salePrice": "",
+        "priceRange": "",
+        "priceMax": "",
+        "priceMin": "",
+        "shippingSurchargeValue": "",
+        "notForIndividualSale": "",
+        "arrivalDate": "",
+        "height": "",
+        "length": "",
+        "width": "",
+        "weight": "",
+        "orderLimit": "",
+        "excludefromXMLSitemap": "",
+        "skuConfigurable": "",
+        "skuActive": "",
+        "productActive": "",
+        "catRefId": "",
+        "imageLocation": "",
+        "location": "",
+        "rolesChangedPerOrganization": {
+            "items": [
+                {
+                    "imageLocation": "",
+                    "propertyId": "",
+                    "name": "",
+                    "optionName": "",
+                    "addOnItem": false,
+                    "title": "",
+                    "total": "",
+                    "value": "",
+                    "firstName": "",
+                    "shippingMethods": "",
+                    "rawTotalPrice": "",
+                    "paymentType": "",
+                    "amount": "",
+                    "address1": "",
+                    "id": "",
+                    "frequency": ""
+                }
+            ],
+            "payments": [
+                {
+                    "imageLocation": "",
+                    "propertyId": "",
+                    "name": "",
+                    "optionName": "",
+                    "addOnItem": false,
+                    "title": "",
+                    "total": "",
+                    "value": "",
+                    "firstName": "",
+                    "shippingMethods": "",
+                    "rawTotalPrice": "",
+                    "paymentType": "",
+                    "amount": "",
+                    "address1": "",
+                    "id": "",
+                    "frequency": ""
+                }
+            ]
         }
-    ],
-    "currencyCode": "",
-    "secondaryCurrencyCode": "",
-    "exchangeRate": 0,
-    "orderHasMixedCurrencies": false,
-    "payTaxInSecondaryCurrency": false,
-    "payShippingInSecondaryCurrency": false,
-    "paymentReversalInfo": {
-        "items": [
-            {
-                "imageLocation": "",
-                "propertyId": "",
-                "name": "",
-                "optionName": "",
-                "addOnItem": false,
-                "title": "",
-                "total": "",
-                "value": "",
-                "firstName": "",
-                "shippingMethods": "",
-                "rawTotalPrice": "",
-                "paymentType": "",
-                "amount": ""
-            }
-        ],
-        "payments": [
-            {
-                "imageLocation": "",
-                "propertyId": "",
-                "name": "",
-                "optionName": "",
-                "addOnItem": false,
-                "title": "",
-                "total": "",
-                "value": "",
-                "firstName": "",
-                "shippingMethods": "",
-                "rawTotalPrice": "",
-                "paymentType": "",
-                "amount": ""
-            }
-        ]
     },
-    "profileInfo": {
+    "roles": "",
+    "removedRoles": "",
+    "combinedRoleChangesMap": {
         "name": "",
         "logoUrl": "",
         "taxReferenceNumber": "",
@@ -619,7 +475,10 @@
                     "shippingMethods": "",
                     "rawTotalPrice": "",
                     "paymentType": "",
-                    "amount": ""
+                    "amount": "",
+                    "address1": "",
+                    "id": "",
+                    "frequency": ""
                 }
             ],
             "payments": [
@@ -636,7 +495,10 @@
                     "shippingMethods": "",
                     "rawTotalPrice": "",
                     "paymentType": "",
-                    "amount": ""
+                    "amount": "",
+                    "address1": "",
+                    "id": "",
+                    "frequency": ""
                 }
             ]
         },
@@ -654,42 +516,7 @@
         "id": "",
         "creationDate": "",
         "creationTime": "",
-        "orderItems": {
-            "items": [
-                {
-                    "imageLocation": "",
-                    "propertyId": "",
-                    "name": "",
-                    "optionName": "",
-                    "addOnItem": false,
-                    "title": "",
-                    "total": "",
-                    "value": "",
-                    "firstName": "",
-                    "shippingMethods": "",
-                    "rawTotalPrice": "",
-                    "paymentType": "",
-                    "amount": ""
-                }
-            ],
-            "payments": [
-                {
-                    "imageLocation": "",
-                    "propertyId": "",
-                    "name": "",
-                    "optionName": "",
-                    "addOnItem": false,
-                    "title": "",
-                    "total": "",
-                    "value": "",
-                    "firstName": "",
-                    "shippingMethods": "",
-                    "rawTotalPrice": "",
-                    "paymentType": "",
-                    "amount": ""
-                }
-            ]
-        },
+        "orderItems": null,
         "firstName": "",
         "lastName": "",
         "prefix": "",
@@ -717,7 +544,10 @@
                     "shippingMethods": "",
                     "rawTotalPrice": "",
                     "paymentType": "",
-                    "amount": ""
+                    "amount": "",
+                    "address1": "",
+                    "id": "",
+                    "frequency": ""
                 }
             ],
             "payments": [
@@ -734,7 +564,10 @@
                     "shippingMethods": "",
                     "rawTotalPrice": "",
                     "paymentType": "",
-                    "amount": ""
+                    "amount": "",
+                    "address1": "",
+                    "id": "",
+                    "frequency": ""
                 }
             ]
         },
@@ -750,6 +583,306 @@
         "returnFee": "",
         "suggestedShippingRefund": "",
         "cardNumber": "",
-        "email": ""
+        "email": "",
+        "phoneNumber": "",
+        "middleName": "",
+        "emailAddress": "",
+        "storeAddress": [
+            {
+                "imageLocation": "",
+                "propertyId": "",
+                "name": "",
+                "optionName": "",
+                "addOnItem": false,
+                "title": "",
+                "total": "",
+                "value": "",
+                "firstName": "",
+                "shippingMethods": "",
+                "rawTotalPrice": "",
+                "paymentType": "",
+                "amount": "",
+                "address1": "",
+                "id": "",
+                "frequency": ""
+            }
+        ],
+        "surcharge": "",
+        "priceInfo": [
+            {
+                "imageLocation": "",
+                "propertyId": "",
+                "name": "",
+                "optionName": "",
+                "addOnItem": false,
+                "title": "",
+                "total": "",
+                "value": "",
+                "firstName": "",
+                "shippingMethods": "",
+                "rawTotalPrice": "",
+                "paymentType": "",
+                "amount": "",
+                "address1": "",
+                "id": "",
+                "frequency": ""
+            }
+        ],
+        "recurringChargeSubtotal": "",
+        "recurringChargeDiscount": "",
+        "recurringChargeTax": "",
+        "recurringChargeShipping": "",
+        "recurringChargeTotal": "",
+        "recurringChargeTotalByFrequency": {
+            "items": [
+                {
+                    "imageLocation": "",
+                    "propertyId": "",
+                    "name": "",
+                    "optionName": "",
+                    "addOnItem": false,
+                    "title": "",
+                    "total": "",
+                    "value": "",
+                    "firstName": "",
+                    "shippingMethods": "",
+                    "rawTotalPrice": "",
+                    "paymentType": "",
+                    "amount": "",
+                    "address1": "",
+                    "id": "",
+                    "frequency": ""
+                }
+            ],
+            "payments": [
+                {
+                    "imageLocation": "",
+                    "propertyId": "",
+                    "name": "",
+                    "optionName": "",
+                    "addOnItem": false,
+                    "title": "",
+                    "total": "",
+                    "value": "",
+                    "firstName": "",
+                    "shippingMethods": "",
+                    "rawTotalPrice": "",
+                    "paymentType": "",
+                    "amount": "",
+                    "address1": "",
+                    "id": "",
+                    "frequency": ""
+                }
+            ]
+        },
+        "externalData": {
+            "items": [
+                {
+                    "imageLocation": "",
+                    "propertyId": "",
+                    "name": "",
+                    "optionName": "",
+                    "addOnItem": false,
+                    "title": "",
+                    "total": "",
+                    "value": "",
+                    "firstName": "",
+                    "shippingMethods": "",
+                    "rawTotalPrice": "",
+                    "paymentType": "",
+                    "amount": "",
+                    "address1": "",
+                    "id": "",
+                    "frequency": ""
+                }
+            ],
+            "payments": [
+                {
+                    "imageLocation": "",
+                    "propertyId": "",
+                    "name": "",
+                    "optionName": "",
+                    "addOnItem": false,
+                    "title": "",
+                    "total": "",
+                    "value": "",
+                    "firstName": "",
+                    "shippingMethods": "",
+                    "rawTotalPrice": "",
+                    "paymentType": "",
+                    "amount": "",
+                    "address1": "",
+                    "id": "",
+                    "frequency": ""
+                }
+            ]
+        },
+        "newOrganizationAndRoles": {
+            "items": [
+                {
+                    "imageLocation": "",
+                    "propertyId": "",
+                    "name": "",
+                    "optionName": "",
+                    "addOnItem": false,
+                    "title": "",
+                    "total": "",
+                    "value": "",
+                    "firstName": "",
+                    "shippingMethods": "",
+                    "rawTotalPrice": "",
+                    "paymentType": "",
+                    "amount": "",
+                    "address1": "",
+                    "id": "",
+                    "frequency": ""
+                }
+            ],
+            "payments": [
+                {
+                    "imageLocation": "",
+                    "propertyId": "",
+                    "name": "",
+                    "optionName": "",
+                    "addOnItem": false,
+                    "title": "",
+                    "total": "",
+                    "value": "",
+                    "firstName": "",
+                    "shippingMethods": "",
+                    "rawTotalPrice": "",
+                    "paymentType": "",
+                    "amount": "",
+                    "address1": "",
+                    "id": "",
+                    "frequency": ""
+                }
+            ]
+        },
+        "default": false,
+        "sites": {
+            "items": [
+                {
+                    "imageLocation": "",
+                    "propertyId": "",
+                    "name": "",
+                    "optionName": "",
+                    "addOnItem": false,
+                    "title": "",
+                    "total": "",
+                    "value": "",
+                    "firstName": "",
+                    "shippingMethods": "",
+                    "rawTotalPrice": "",
+                    "paymentType": "",
+                    "amount": "",
+                    "address1": "",
+                    "id": "",
+                    "frequency": ""
+                }
+            ],
+            "payments": [
+                {
+                    "imageLocation": "",
+                    "propertyId": "",
+                    "name": "",
+                    "optionName": "",
+                    "addOnItem": false,
+                    "title": "",
+                    "total": "",
+                    "value": "",
+                    "firstName": "",
+                    "shippingMethods": "",
+                    "rawTotalPrice": "",
+                    "paymentType": "",
+                    "amount": "",
+                    "address1": "",
+                    "id": "",
+                    "frequency": ""
+                }
+            ]
+        },
+        "site": "",
+        "approverComments": "",
+        "profile": "",
+        "daytimeTelephoneNumber": "",
+        "adminPageLocation": "",
+        "siteLocation": "",
+        "orgId": "",
+        "relatedOrganizationName": "",
+        "createdTime": "",
+        "preOrderedQuantity": 0,
+        "backOrderedQuantity": 0,
+        "availabilityDate": "",
+        "title": "",
+        "description": "",
+        "longDescription": "",
+        "productId": "",
+        "brand": "",
+        "productTaxCode": "",
+        "price": "",
+        "listPrice": "",
+        "onSale": "",
+        "salePrice": "",
+        "priceRange": "",
+        "priceMax": "",
+        "priceMin": "",
+        "shippingSurchargeValue": "",
+        "notForIndividualSale": "",
+        "arrivalDate": "",
+        "height": "",
+        "length": "",
+        "width": "",
+        "weight": "",
+        "orderLimit": "",
+        "excludefromXMLSitemap": "",
+        "skuConfigurable": "",
+        "skuActive": "",
+        "productActive": "",
+        "catRefId": "",
+        "imageLocation": "",
+        "location": "",
+        "rolesChangedPerOrganization": {
+            "items": [
+                {
+                    "imageLocation": "",
+                    "propertyId": "",
+                    "name": "",
+                    "optionName": "",
+                    "addOnItem": false,
+                    "title": "",
+                    "total": "",
+                    "value": "",
+                    "firstName": "",
+                    "shippingMethods": "",
+                    "rawTotalPrice": "",
+                    "paymentType": "",
+                    "amount": "",
+                    "address1": "",
+                    "id": "",
+                    "frequency": ""
+                }
+            ],
+            "payments": [
+                {
+                    "imageLocation": "",
+                    "propertyId": "",
+                    "name": "",
+                    "optionName": "",
+                    "addOnItem": false,
+                    "title": "",
+                    "total": "",
+                    "value": "",
+                    "firstName": "",
+                    "shippingMethods": "",
+                    "rawTotalPrice": "",
+                    "paymentType": "",
+                    "amount": "",
+                    "address1": "",
+                    "id": "",
+                    "frequency": ""
+                }
+            ]
+        }
     }
 }
