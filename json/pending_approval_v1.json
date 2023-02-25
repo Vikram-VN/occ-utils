@@ -59,13 +59,9 @@
             ]
         }
     },
-    "dynamicProperties": {
-        "items": [
-            {
-                "propertyId": ""
-            }
-        ]
-    },
+    "dynamicProperties": [
+        {}
+    ],
     "organization": {
         "name": "",
         "logoUrl": "",

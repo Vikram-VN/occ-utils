@@ -12,21 +12,13 @@
     "orderTime": 0,
     "paymentMethods": "",
     "shippingGroup": {
-        "dynamicProperties": {
-            "items": [
-                {
-                    "propertyId": ""
-                }
-            ]
-        }
-    },
-    "dynamicProperties": {
-        "items": [
-            {
-                "propertyId": ""
-            }
+        "dynamicProperties": [
+            {}
         ]
     },
+    "dynamicProperties": [
+        {}
+    ],
     "currencyCode": "",
     "secondaryCurrencyCode": "",
     "exchangeRate": 0,

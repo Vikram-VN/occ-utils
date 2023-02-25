@@ -17,13 +17,9 @@
             {}
         ]
     },
-    "dynamicProperties": {
-        "items": [
-            {
-                "propertyId": ""
-            }
-        ]
-    },
+    "dynamicProperties": [
+        {}
+    ],
     "currencyCode": "",
     "secondaryCurrencyCode": "",
     "exchangeRate": 0,

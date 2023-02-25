@@ -15,7 +15,7 @@ const processData = (json, data, filtered = false, prevKey) => {
     string: ""
   }
 
-  const listItems = ["items", "payments", "shippingAddress", "shippingMethod", "shippingPriceInfo", "storeAddress", "priceInfo"];
+  const listItems = ["items", "payments", "shippingAddress", "shippingMethod", "shippingPriceInfo", "storeAddress", "priceInfo", "dynamicProperties"];
 
   let payload;
   if (!filtered) {
