@@ -65,11 +65,11 @@ const processEmailTemplate = data => {
   newData.map(data => processData(json, data.replace(/\n/g, "")));
   return json; // Add return statement to return the processed JSON object
 }
-folders.slice(29).map(setTimeout((folder, index) => {
+folders.map(setTimeout((folder, index) => {
   const data = fs.readFileSync(`./templates/${folder}/Readme.txt`, { encoding: "utf-8" });
   try {
     const jsonObject = processEmailTemplate(data);
-    console.log(index + ") " + folder, data, '\r\n')
+    console.log(index + ") " + folder, '\r\n')
     fs.writeFileSync(`./json/${folder}.json`, JSON.stringify(jsonObject, null, 4), { encoding: "utf-8" })
   } catch (e) {
     console.log(e)
