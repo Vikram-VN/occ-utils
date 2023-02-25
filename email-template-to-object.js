@@ -7,7 +7,7 @@ The following fields can be referenced in the templates.
 --------------------------------------------------------
   data.locale (string)
   data.storefrontUrl (string)
-  data.sitename (string)
+  data.siteName (string)
   data.firstName (string)
   data.unsubscribeLocation (string)
   data.checkoutLocation (string)
@@ -128,53 +128,54 @@ The following fields can be referenced in the templates.
   data.orderHasMixedCurrencies (boolean)
   data.payTaxInSecondaryCurrency (boolean)
   data.payShippingInSecondaryCurrency (boolean)`;
-  
-// const replaceData = data.replace(/data./gi, "");
-// const replaceArrow = replaceData.replace(/ ->/gi, ":");
-// const replaceParenthesis = replaceArrow.replace(/[()]/gi, "");
-// const replaceString = replaceParenthesis.replace(/ string/gi, ": null,");
-// const replaceBoolean = replaceString.replace(/ boolean/gi, ": true,");
 
-const processKey = (obj, props) => {
-  const {keys, value} = props;
 
-  const currentKey = keys[0];
+const dataTypes = {
+  array: {},
+  object: {},
+  items: [],
+  null: null,
+  integer: 0,
+  number: 0,
+  double: 0.0,
+  boolean: false,
+  string: ""
+}
 
-  // if there's only one key process and return
-  if (keys.length === 1) {
-    if (currentKey === '') {
-      // if blank then it's an array so push value into it
-      obj.push(value);
-    } else {
-      // assign value to object property or array position
-      obj[currentKey] = value;
-    }
+const processData = (json, data, filtered = false) => {
+  let payload;
+  if (!filtered) {
+    payload = data.split(/[()]/gi).filter(data => data.trim());
   } else {
-    const currentKeyNotDefined = obj[currentKey] === undefined;
-    const currentKeyNotDefinedOrNotArray = currentKeyNotDefined || !Array.isArray(obj[currentKey]);
-    const currentKeyNotDefinedOrNotObject = currentKeyNotDefined || !isObject(obj[currentKey]);
-    const nextKey = keys[1];
-
-    if (nextKey === '') {
-      if (currentKeyNotDefinedOrNotArray) {
-        // create an array for array values
-        obj[currentKey] = [];
-      }
-    } else if (Number.isInteger(parseFloat(nextKey))) {
-      // is a digit i.e. array index
-      if (currentKeyNotDefinedOrNotArray) {
-        // create an array for array values
-        obj[currentKey] = [];
-      }
-    } else if (currentKeyNotDefinedOrNotObject) {
-      // create an object
-      obj[currentKey] = {};
-    }
-
-    // call process key again
-    const lastKey = keys.slice(1);
-    processKey(obj[currentKey], {keys: lastKey, value});
+    payload = data.map(data => data.replace("->", "").trim());
   }
-};
+  if (payload.length >= 2) {
+    const dataType = payload[1].trim();
+    const key = payload[0].trim();
+    const value = dataTypes[key.includes("items") ? "items" : dataType];
+    switch (dataType) {
+      case "string":
+      case "boolean":
+      case "double":
+      case "number":
+      case "null":
+      case "integer":
+        json[key] = value;
+        processData(json, payload.slice(2), true);
+        break;
+      default:
+        const newPayload = payload.slice(2);
+        processData(json[key] = value, newPayload, true);
+    }
+  }
+}
 
-console.log(replaceBoolean)
+const processEmailTemplate = data => {
+  const newData = data.split("data.").slice(1);
+  const json = {};
+  newData.map(data => processData(json, data.replace(/\n/g, "")));
+  return json; // Add return statement to return the processed JSON object
+}
+
+const jsonObject = processEmailTemplate(data);
+console.log(JSON.stringify(jsonObject));
