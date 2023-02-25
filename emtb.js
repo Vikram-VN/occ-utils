@@ -5,13 +5,13 @@ const folders = fs.readdirSync("./templates", { encoding: "utf-8" });
 const dataTypes = {
   array: {},
   object: {},
-  items: [{}],
+  list: [{}],
   null: null,
   integer: 0,
   number: 0,
   double: 0.0,
   boolean: false,
-  string: ""
+  string: "",
 }
 
 const processData = (json, data, filtered = false, prevKey) => {
@@ -26,7 +26,7 @@ const processData = (json, data, filtered = false, prevKey) => {
   if (payload.length >= 2) {
     const dataType = payload[1].trim();
     const key = payload[0].trim();
-    const value = dataTypes[(key.includes("items") ? "items" : dataType).toLowerCase()];
+    const value = dataTypes[(dataType.includes("array") ? "list" : dataType).toLowerCase()];
     switch (dataType) {
       case "string":
       case "boolean":
@@ -47,7 +47,7 @@ const processData = (json, data, filtered = false, prevKey) => {
       default:
         // Removing 2 items from the array list (because we already used those)
         const newPayload = payload.slice(2);
-        if (key.includes("items")) {
+        if (dataType.toLowerCase().includes("array")) {
           processData(json[key] = value, newPayload, true, key);
         } else {
           processData(json[key] = value, newPayload, true);
@@ -67,6 +67,7 @@ folders.map(folder => {
   const data = fs.readFileSync(`./templates/${folder}/Readme.txt`, { encoding: "utf-8" });
   try {
     const jsonObject = processEmailTemplate(data);
+    console.log(folder, '\r\n')
     fs.writeFileSync(`./json/${folder}.json`, JSON.stringify(jsonObject, null, 4), { encoding: "utf-8" })
   } catch (e) {
     console.log(e)
