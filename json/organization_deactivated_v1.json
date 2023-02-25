@@ -12,7 +12,8 @@
     "sites": {
         "items": [
             {
-                "name": ""
+                "name": "",
+                "url": ""
             }
         ]
     }

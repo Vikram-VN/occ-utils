@@ -15,7 +15,13 @@
     "products": {
         "items": [
             {
-                "imageLocation": ""
+                "imageLocation": "",
+                "title": "",
+                "location": "",
+                "productId": "",
+                "catRefId": "",
+                "quantity": 0,
+                "price": ""
             }
         ]
     },
@@ -23,7 +29,18 @@
     "recommendations": {
         "items": [
             {
-                "title": ""
+                "title": "",
+                "description": "",
+                "longDescription": "",
+                "brand": "",
+                "location": "",
+                "imageLocation": "",
+                "listPrice": "",
+                "onSale": "",
+                "salePrice": "",
+                "priceRange": "",
+                "priceMax": "",
+                "priceMin": ""
             }
         ]
     },

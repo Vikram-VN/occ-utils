@@ -6,7 +6,16 @@
     "organizationRequests": {
         "items": [
             {
-                "id": ""
+                "id": "",
+                "company": "",
+                "profile": "",
+                "daytimeTelephoneNumber": "",
+                "email": "",
+                "relatedOrganizationName": "",
+                "site": "",
+                "siteLocation": "",
+                "createdTime": "",
+                "createdBy": ""
             }
         ]
     }

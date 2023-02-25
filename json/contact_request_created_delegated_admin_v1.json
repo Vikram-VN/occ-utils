@@ -6,7 +6,13 @@
     "profileRequests": {
         "items": [
             {
-                "id": ""
+                "id": "",
+                "profile": "",
+                "email": "",
+                "site": "",
+                "siteLocation": "",
+                "createdTime": "",
+                "createdBy": ""
             }
         ]
     }

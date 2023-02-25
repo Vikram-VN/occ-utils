@@ -40,12 +40,13 @@ const processData = (json, data, filtered = false, prevKey) => {
         if (!prevKey) {
           // This will be used to add json object key values to the main object
           json[key] = value;
+          processData(json, payload.slice(2), true);
         } else {
           // This used to add key values pairs to items list
           json[0][key] = value;
+          processData(json, payload.slice(2), true, key);
         }
         // Again iterating to set key values for object
-        processData(json, payload.slice(2), true);
         break;
       default:
         // Removing 2 items from the array list (because we already used those)

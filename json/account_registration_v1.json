@@ -11,7 +11,18 @@
     "recommendations": {
         "items": [
             {
-                "title": ""
+                "title": "",
+                "description": "",
+                "longDescription": "",
+                "brand": "",
+                "location": "",
+                "imageLocation": "",
+                "listPrice": "",
+                "onSale": "",
+                "salePrice": "",
+                "priceRange": "",
+                "priceMax": "",
+                "priceMin": ""
             }
         ]
     }

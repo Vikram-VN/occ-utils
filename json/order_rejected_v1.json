@@ -27,7 +27,23 @@
     },
     "shippingAddress": [
         {
-            "firstName": ""
+            "firstName": "",
+            "lastName": "",
+            "prefix": "",
+            "suffix": "",
+            "address1": "",
+            "address2": "",
+            "address3": "",
+            "city": "",
+            "county": "",
+            "state": "",
+            "postalCode": "",
+            "country": "",
+            "companyName": "",
+            "faxNumber": "",
+            "phoneNumber": "",
+            "email": "",
+            "jobTitle": ""
         }
     ],
     "shippingGroups": {
@@ -41,7 +57,16 @@
     "orderItems": {
         "items": [
             {
-                "imageLocation": ""
+                "imageLocation": "",
+                "title": "",
+                "location": "",
+                "productId": "",
+                "catRefId": "",
+                "quantity": 0,
+                "preOrderedQuantity": 0,
+                "backOrderedQuantity": 0,
+                "availabilityDate": "",
+                "price": ""
             }
         ]
     },
@@ -59,7 +84,8 @@
         "recurringChargeTotalByFrequency": {
             "items": [
                 {
-                    "frequency": ""
+                    "frequency": "",
+                    "total": ""
                 }
             ]
         }
@@ -80,7 +106,10 @@
     "scheduledOrderDetails": {
         "items": [
             {
-                "name": ""
+                "name": "",
+                "id": "",
+                "nextScheduledRun": 0,
+                "link": ""
             }
         ]
     },

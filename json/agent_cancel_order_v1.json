@@ -14,7 +14,16 @@
         "orderItems": {
             "items": [
                 {
-                    "imageLocation": ""
+                    "imageLocation": "",
+                    "title": "",
+                    "location": "",
+                    "quantity": 0,
+                    "productId": "",
+                    "catRefId": "",
+                    "preOrderedQuantity": 0,
+                    "backOrderedQuantity": 0,
+                    "availabilityDate": "",
+                    "price": ""
                 }
             ]
         }
