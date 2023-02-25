@@ -30,6 +30,7 @@ const processData = (json, data, filtered = false, prevKey) => {
     const key = payload[0].trim();
     const find = listItems.includes(key) && dataType.toLowerCase() !== "string" ? "items" : dataType.toLowerCase();
     const value = dataTypes[find];
+    const newPayload = payload.slice(2);
     switch (dataType) {
       case "string":
       case "boolean":
@@ -40,17 +41,16 @@ const processData = (json, data, filtered = false, prevKey) => {
         if (!prevKey) {
           // This will be used to add json object key values to the main object
           json[key] = value;
-          processData(json, payload.slice(2), true);
+          processData(json, newPayload, true);
         } else {
           // This used to add key values pairs to items list
           json[0][key] = value;
-          processData(json, payload.slice(2), true, key);
+          processData(json, newPayload, true, key);
         }
         // Again iterating to set key values for object
         break;
       default:
         // Removing 2 items from the array list (because we already used those)
-        const newPayload = payload.slice(2);
         if (listItems.includes(key)) {
           processData(json[key] = value, newPayload, true, key);
         } else {
