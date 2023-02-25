@@ -133,7 +133,7 @@ The following fields can be referenced in the templates.
 const dataTypes = {
   array: {},
   object: {},
-  items: [],
+  items: [{}],
   null: null,
   integer: 0,
   number: 0,
@@ -142,7 +142,7 @@ const dataTypes = {
   string: ""
 }
 
-const processData = (json, data, filtered = false) => {
+const processData = (json, data, filtered = false, prevKey) => {
   let payload;
   if (!filtered) {
     payload = data.split(/[()]/gi).filter(data => data.trim());
@@ -160,12 +160,21 @@ const processData = (json, data, filtered = false) => {
       case "number":
       case "null":
       case "integer":
-        json[key] = value;
+        if (!prevKey) {
+          json[key] = value;
+        } else {
+          json[0][key] = value;
+        }
+
         processData(json, payload.slice(2), true);
         break;
       default:
         const newPayload = payload.slice(2);
-        processData(json[key] = value, newPayload, true);
+        if (key.includes("items")) {
+          processData(json[key] = value, newPayload, true, key);
+        } else {
+          processData(json[key] = value, newPayload, true);
+        }
     }
   }
 }
