@@ -67,7 +67,7 @@ folders.map(folder => {
   const data = fs.readFileSync(`./templates/${folder}/Readme.txt`, { encoding: "utf-8" });
   try {
     const jsonObject = processEmailTemplate(data);
-    fs.writeFileSync(`./json/${folder}.json`, JSON.stringify(jsonObject), { encoding: "utf-8", flag: "wx+" })
+    fs.writeFileSync(`./json/${folder}.json`, JSON.stringify(jsonObject, null, 4), { encoding: "utf-8" })
   } catch (e) {
     console.log(e)
   }
