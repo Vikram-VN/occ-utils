@@ -154,7 +154,7 @@ const processData = (json, data, filtered = false, prevKey) => {
   if (payload.length >= 2) {
     const dataType = payload[1].trim();
     const key = payload[0].trim();
-    const value = dataTypes[key.includes("items") ? "items" : dataType];
+    const value = dataTypes[(key.includes("items") ? "items" : dataType).toLowerCase()];
     switch (dataType) {
       case "string":
       case "boolean":

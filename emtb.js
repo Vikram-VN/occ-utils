@@ -1,5 +1,7 @@
 const fs = require("fs");
 
+const folders = fs.readdirSync("./templates", { encoding: "utf-8" });
+
 const dataTypes = {
   array: {},
   object: {},
@@ -24,7 +26,7 @@ const processData = (json, data, filtered = false, prevKey) => {
   if (payload.length >= 2) {
     const dataType = payload[1].trim();
     const key = payload[0].trim();
-    const value = dataTypes[key.includes("items") ? "items" : dataType];
+    const value = dataTypes[(key.includes("items") ? "items" : dataType).toLowerCase()];
     switch (dataType) {
       case "string":
       case "boolean":
@@ -61,5 +63,13 @@ const processEmailTemplate = data => {
   newData.map(data => processData(json, data.replace(/\n/g, "")));
   return json; // Add return statement to return the processed JSON object
 }
+folders.map(folder => {
+  const data = fs.readFileSync(`./templates/${folder}/Readme.txt`, { encoding: "utf-8" });
+  try {
+    const jsonObject = processEmailTemplate(data);
+    fs.writeFileSync(`./json/${folder}.json`, JSON.stringify(jsonObject), { encoding: "utf-8", flag: "wx+" })
+  } catch (e) {
+    console.log(e)
+  }
 
-const jsonObject = processEmailTemplate(data);
+})
