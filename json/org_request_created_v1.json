@@ -6,42 +6,7 @@
     "organizationRequests": {
         "items": [
             {
-                "imageLocation": "",
-                "propertyId": "",
-                "name": "",
-                "optionName": "",
-                "addOnItem": false,
-                "title": "",
-                "total": "",
-                "value": "",
-                "firstName": "",
-                "shippingMethods": "",
-                "rawTotalPrice": "",
-                "paymentType": "",
-                "amount": "",
-                "address1": "",
-                "id": "",
-                "frequency": ""
-            }
-        ],
-        "payments": [
-            {
-                "imageLocation": "",
-                "propertyId": "",
-                "name": "",
-                "optionName": "",
-                "addOnItem": false,
-                "title": "",
-                "total": "",
-                "value": "",
-                "firstName": "",
-                "shippingMethods": "",
-                "rawTotalPrice": "",
-                "paymentType": "",
-                "amount": "",
-                "address1": "",
-                "id": "",
-                "frequency": ""
+                "id": ""
             }
         ]
     }

@@ -10,49 +10,12 @@
         "logoUrl": "",
         "taxReferenceNumber": "",
         "vatReferenceNumber": "",
-        "taxExemptionCode": "",
-        "label": "",
-        "displayValue": "",
-        "value": "",
-        "actionCode": "",
-        "recurringCharge": "",
-        "externalRecurringCharge": 0,
-        "externalRecurringChargeFrequency": "",
-        "externalRecurringChargeDuration": "",
-        "previousPrice": "",
-        "variants": {
-            "items": [
-                {
-                    "imageLocation": "",
-                    "propertyId": "",
-                    "name": "",
-                    "optionName": "",
-                    "addOnItem": false,
-                    "title": ""
-                }
-            ]
-        },
-        "activationDate": "",
-        "deactivationDate": "",
-        "transactionDate": "",
-        "serviceId": "",
-        "assetKey": "",
-        "rootAssetKey": "",
-        "parentAssetKey": "",
-        "customerAccountId": "",
-        "billingAccountId": "",
-        "billingProfileId": "",
-        "serviceAccountId": ""
+        "taxExemptionCode": ""
     },
     "products": {
         "items": [
             {
-                "imageLocation": "",
-                "propertyId": "",
-                "name": "",
-                "optionName": "",
-                "addOnItem": false,
-                "title": ""
+                "imageLocation": ""
             }
         ]
     },
@@ -60,11 +23,6 @@
     "recommendations": {
         "items": [
             {
-                "imageLocation": "",
-                "propertyId": "",
-                "name": "",
-                "optionName": "",
-                "addOnItem": false,
                 "title": ""
             }
         ]
