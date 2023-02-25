@@ -1,0 +1,23 @@
+{
+    "sitename": "",
+    "storefrontUrl": "",
+    "firstName": "",
+    "lastName": "",
+    "email": "",
+    "receiveEmail": "",
+    "resetPasswordLink": "",
+    "id": "",
+    "locale": "",
+    "recommendations": {
+        "items": [
+            {
+                "imageLocation": "",
+                "propertyId": "",
+                "name": "",
+                "optionName": "",
+                "addOnItem": false,
+                "title": ""
+            }
+        ]
+    }
+}

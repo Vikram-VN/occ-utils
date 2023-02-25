@@ -65,7 +65,7 @@ const processEmailTemplate = data => {
   newData.map(data => processData(json, data.replace(/\n/g, "")));
   return json; // Add return statement to return the processed JSON object
 }
-folders.map(setTimeout((folder, index) => {
+folders.map((folder, index) => {
   const data = fs.readFileSync(`./templates/${folder}/Readme.txt`, { encoding: "utf-8" });
   try {
     const jsonObject = processEmailTemplate(data);
@@ -75,4 +75,4 @@ folders.map(setTimeout((folder, index) => {
     console.log(e)
   }
 
-}, index * 10000));
+})

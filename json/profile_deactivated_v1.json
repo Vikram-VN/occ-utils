@@ -1,15 +1,8 @@
 {
-    "storeFrontHostName": "",
-    "wishListOwnerFirstName": "",
-    "wishListOwnerLastName": "",
-    "wishListId": "",
-    "wishListDisplayName": "",
-    "newMemberFirstName": "",
-    "newMemberLastName": "",
-    "recipientEmailAddress": "",
-    "newMemberProfileImageURL": "",
-    "wishListOwnerProfileImageURL": "",
-    "recipientFullName": "",
+    "sitename": "",
+    "firstName": "",
+    "organizationNames": "",
+    "email": "",
     "organization": {
         "name": "",
         "logoUrl": "",
@@ -43,9 +36,7 @@
                     "amount": "",
                     "address1": "",
                     "id": "",
-                    "frequency": "",
-                    "shippingMethod": "",
-                    "locale": ""
+                    "frequency": ""
                 }
             ],
             "payments": [
@@ -65,9 +56,7 @@
                     "amount": "",
                     "address1": "",
                     "id": "",
-                    "frequency": "",
-                    "shippingMethod": "",
-                    "locale": ""
+                    "frequency": ""
                 }
             ]
         },
@@ -116,9 +105,7 @@
                     "amount": "",
                     "address1": "",
                     "id": "",
-                    "frequency": "",
-                    "shippingMethod": "",
-                    "locale": ""
+                    "frequency": ""
                 }
             ],
             "payments": [
@@ -138,9 +125,7 @@
                     "amount": "",
                     "address1": "",
                     "id": "",
-                    "frequency": "",
-                    "shippingMethod": "",
-                    "locale": ""
+                    "frequency": ""
                 }
             ]
         },
@@ -177,9 +162,7 @@
                 "amount": "",
                 "address1": "",
                 "id": "",
-                "frequency": "",
-                "shippingMethod": "",
-                "locale": ""
+                "frequency": ""
             }
         ],
         "surcharge": "",
@@ -200,9 +183,7 @@
                 "amount": "",
                 "address1": "",
                 "id": "",
-                "frequency": "",
-                "shippingMethod": "",
-                "locale": ""
+                "frequency": ""
             }
         ],
         "recurringChargeSubtotal": "",
@@ -228,9 +209,7 @@
                     "amount": "",
                     "address1": "",
                     "id": "",
-                    "frequency": "",
-                    "shippingMethod": "",
-                    "locale": ""
+                    "frequency": ""
                 }
             ],
             "payments": [
@@ -250,9 +229,7 @@
                     "amount": "",
                     "address1": "",
                     "id": "",
-                    "frequency": "",
-                    "shippingMethod": "",
-                    "locale": ""
+                    "frequency": ""
                 }
             ]
         },
@@ -274,9 +251,7 @@
                     "amount": "",
                     "address1": "",
                     "id": "",
-                    "frequency": "",
-                    "shippingMethod": "",
-                    "locale": ""
+                    "frequency": ""
                 }
             ],
             "payments": [
@@ -296,9 +271,7 @@
                     "amount": "",
                     "address1": "",
                     "id": "",
-                    "frequency": "",
-                    "shippingMethod": "",
-                    "locale": ""
+                    "frequency": ""
                 }
             ]
         },
@@ -320,9 +293,7 @@
                     "amount": "",
                     "address1": "",
                     "id": "",
-                    "frequency": "",
-                    "shippingMethod": "",
-                    "locale": ""
+                    "frequency": ""
                 }
             ],
             "payments": [
@@ -342,9 +313,7 @@
                     "amount": "",
                     "address1": "",
                     "id": "",
-                    "frequency": "",
-                    "shippingMethod": "",
-                    "locale": ""
+                    "frequency": ""
                 }
             ]
         },
@@ -367,9 +336,7 @@
                     "amount": "",
                     "address1": "",
                     "id": "",
-                    "frequency": "",
-                    "shippingMethod": "",
-                    "locale": ""
+                    "frequency": ""
                 }
             ],
             "payments": [
@@ -389,9 +356,7 @@
                     "amount": "",
                     "address1": "",
                     "id": "",
-                    "frequency": "",
-                    "shippingMethod": "",
-                    "locale": ""
+                    "frequency": ""
                 }
             ]
         },
@@ -434,74 +399,6 @@
         "productActive": "",
         "catRefId": "",
         "imageLocation": "",
-        "location": "",
-        "rolesChangedPerOrganization": {
-            "items": [
-                {
-                    "imageLocation": "",
-                    "propertyId": "",
-                    "name": "",
-                    "optionName": "",
-                    "addOnItem": false,
-                    "title": "",
-                    "total": "",
-                    "value": "",
-                    "firstName": "",
-                    "shippingMethods": "",
-                    "rawTotalPrice": "",
-                    "paymentType": "",
-                    "amount": "",
-                    "address1": "",
-                    "id": "",
-                    "frequency": "",
-                    "shippingMethod": "",
-                    "locale": ""
-                }
-            ],
-            "payments": [
-                {
-                    "imageLocation": "",
-                    "propertyId": "",
-                    "name": "",
-                    "optionName": "",
-                    "addOnItem": false,
-                    "title": "",
-                    "total": "",
-                    "value": "",
-                    "firstName": "",
-                    "shippingMethods": "",
-                    "rawTotalPrice": "",
-                    "paymentType": "",
-                    "amount": "",
-                    "address1": "",
-                    "id": "",
-                    "frequency": "",
-                    "shippingMethod": "",
-                    "locale": ""
-                }
-            ]
-        },
-        "shippingPriceInfo": [
-            {
-                "imageLocation": "",
-                "propertyId": "",
-                "name": "",
-                "optionName": "",
-                "addOnItem": false,
-                "title": "",
-                "total": "",
-                "value": "",
-                "firstName": "",
-                "shippingMethods": "",
-                "rawTotalPrice": "",
-                "paymentType": "",
-                "amount": "",
-                "address1": "",
-                "id": "",
-                "frequency": "",
-                "shippingMethod": "",
-                "locale": ""
-            }
-        ]
+        "location": ""
     }
 }
