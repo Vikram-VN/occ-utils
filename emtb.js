@@ -51,7 +51,9 @@ const processData = (json, data, filtered = false, prevKey) => {
         break;
       default:
         // Removing 2 items from the array list (because we already used those)
-        if (listItems.includes(key)) {
+        if (listItems.includes(key) && prevKey) {
+          processData(json[0][key] = value, newPayload, true, key);
+        } else if (listItems.includes(key)) {
           processData(json[key] = value, newPayload, true, key);
         } else {
           processData(json[key] = value, newPayload, true);

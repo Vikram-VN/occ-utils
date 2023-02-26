@@ -21,7 +21,21 @@
                 "productId": "",
                 "catRefId": "",
                 "quantity": 0,
-                "price": ""
+                "price": "",
+                "dynamicProperties": [
+                    {
+                        "items": [
+                            {
+                                "propertyId": "",
+                                "propertyLabel": "",
+                                "propertyType": "",
+                                "propertyValue": "",
+                                "externalPrice": "",
+                                "actionCode": ""
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     },

@@ -44,7 +44,35 @@
     "shippingGroups": {
         "items": [
             {
-                "shippingMethods": ""
+                "shippingMethods": "",
+                "shippingAddress": [
+                    {
+                        "firstName": "",
+                        "lastName": "",
+                        "prefix": "",
+                        "suffix": "",
+                        "address1": "",
+                        "address2": "",
+                        "address3": "",
+                        "city": "",
+                        "county": "",
+                        "state": "",
+                        "postalCode": "",
+                        "country": "",
+                        "dynamicProperties": [
+                            {
+                                "items": [
+                                    {
+                                        "propertyId": "",
+                                        "propertyLabel": "",
+                                        "propertyType": "",
+                                        "propertyValue": ""
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     },
@@ -61,7 +89,20 @@
                 "preOrderedQuantity": 0,
                 "backOrderedQuantity": 0,
                 "availabilityDate": "",
-                "price": ""
+                "price": "",
+                "dynamicProperties": [
+                    {
+                        "items": [
+                            {
+                                "propertyId": "",
+                                "propertyLabel": "",
+                                "propertyType": "",
+                                "propertyValue": "",
+                                "externalPrice": ""
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     },
@@ -86,7 +127,16 @@
         }
     },
     "dynamicProperties": [
-        {}
+        {
+            "items": [
+                {
+                    "propertyId": "",
+                    "propertyLabel": "",
+                    "propertyType": "",
+                    "propertyValue": ""
+                }
+            ]
+        }
     ],
     "organization": {
         "name": "",
@@ -96,7 +146,21 @@
         "taxExemptionCode": ""
     },
     "payments": [
-        {}
+        {
+            "items": [
+                {
+                    "paymentType": "",
+                    "poNumber": "",
+                    "paymentMethod": "",
+                    "currencyCode": "",
+                    "amount": 0,
+                    "amountAuthorized": 0,
+                    "amountCredited": 0,
+                    "amountDebited": 0,
+                    "state": ""
+                }
+            ]
+        }
     ],
     "scheduledOrderDetails": {
         "items": [

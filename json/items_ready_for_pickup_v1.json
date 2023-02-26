@@ -13,11 +13,44 @@
     "paymentMethods": "",
     "shippingGroup": {
         "dynamicProperties": [
-            {}
+            {
+                "items": [
+                    {
+                        "propertyId": "",
+                        "propertyLabel": "",
+                        "propertyType": "",
+                        "propertyValue": "",
+                        "storeAddress": [
+                            {
+                                "name": "",
+                                "address1": "",
+                                "address2": "",
+                                "address3": "",
+                                "city": "",
+                                "county": "",
+                                "stateAddress": "",
+                                "postalCode": "",
+                                "country": "",
+                                "phoneNumber": "",
+                                "shippingDate": ""
+                            }
+                        ]
+                    }
+                ]
+            }
         ]
     },
     "dynamicProperties": [
-        {}
+        {
+            "items": [
+                {
+                    "propertyId": "",
+                    "propertyLabel": "",
+                    "propertyType": "",
+                    "propertyValue": ""
+                }
+            ]
+        }
     ],
     "currencyCode": "",
     "secondaryCurrencyCode": "",
@@ -33,6 +66,20 @@
         "taxExemptionCode": ""
     },
     "payments": [
-        {}
+        {
+            "items": [
+                {
+                    "paymentType": "",
+                    "poNumber": "",
+                    "paymentMethod": "",
+                    "currencyCode": "",
+                    "amount": 0,
+                    "amountAuthorized": 0,
+                    "amountCredited": 0,
+                    "amountDebited": 0,
+                    "state": ""
+                }
+            ]
+        }
     ]
 }

@@ -34,7 +34,19 @@
             "items": [
                 {
                     "optionName": "",
-                    "optionValue": ""
+                    "optionValue": "",
+                    "dynamicProperties": [
+                        {
+                            "items": [
+                                {
+                                    "propertyId": "",
+                                    "propertyLabel": "",
+                                    "propertyType": "",
+                                    "propertyValue": ""
+                                }
+                            ]
+                        }
+                    ]
                 }
             ]
         }

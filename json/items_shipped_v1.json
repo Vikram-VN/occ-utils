@@ -14,11 +14,57 @@
     "cartName": "",
     "shippingGroups": {
         "items": [
-            {}
+            {
+                "dynamicProperties": [
+                    {
+                        "items": [
+                            {
+                                "propertyId": "",
+                                "propertyLabel": "",
+                                "propertyType": "",
+                                "propertyValue": "",
+                                "shippingAddress": [
+                                    {
+                                        "firstName": "",
+                                        "lastName": "",
+                                        "prefix": "",
+                                        "suffix": "",
+                                        "address1": "",
+                                        "address2": "",
+                                        "address3": "",
+                                        "city": "",
+                                        "county": "",
+                                        "state": "",
+                                        "postalCode": "",
+                                        "country": "",
+                                        "companyName": "",
+                                        "faxNumber": "",
+                                        "phoneNumber": "",
+                                        "email": "",
+                                        "jobTitle": "",
+                                        "shippingMethod": "",
+                                        "trackingNumber": "",
+                                        "shippingDate": ""
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
         ]
     },
     "dynamicProperties": [
-        {}
+        {
+            "items": [
+                {
+                    "propertyId": "",
+                    "propertyLabel": "",
+                    "propertyType": "",
+                    "propertyValue": ""
+                }
+            ]
+        }
     ],
     "currencyCode": "",
     "secondaryCurrencyCode": "",
@@ -34,6 +80,20 @@
         "taxExemptionCode": ""
     },
     "payments": [
-        {}
+        {
+            "items": [
+                {
+                    "paymentType": "",
+                    "poNumber": "",
+                    "paymentMethod": "",
+                    "currencyCode": "",
+                    "amount": 0,
+                    "amountAuthorized": 0,
+                    "amountCredited": 0,
+                    "amountDebited": 0,
+                    "state": ""
+                }
+            ]
+        }
     ]
 }
