@@ -1,0 +1,29 @@
+{
+    "sitename": "",
+    "storefrontUrl": "",
+    "firstName": "",
+    "lastName": "",
+    "email": "",
+    "receiveEmail": "",
+    "resetPasswordLink": "",
+    "id": "",
+    "locale": "",
+    "recommendations": {
+        "items": [
+            {
+                "title": "",
+                "description": "",
+                "longDescription": "",
+                "brand": "",
+                "location": "",
+                "imageLocation": "",
+                "listPrice": "",
+                "onSale": "",
+                "salePrice": "",
+                "priceRange": "",
+                "priceMax": "",
+                "priceMin": ""
+            }
+        ]
+    }
+}

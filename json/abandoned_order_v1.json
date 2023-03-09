@@ -1,0 +1,67 @@
+{
+    "locale": "",
+    "storefrontUrl": "",
+    "sitename": "",
+    "firstName": "",
+    "unsubscribeLocation": "",
+    "checkoutLocation": "",
+    "organization": {
+        "name": "",
+        "logoUrl": "",
+        "taxReferenceNumber": "",
+        "vatReferenceNumber": "",
+        "taxExemptionCode": ""
+    },
+    "products": {
+        "items": [
+            {
+                "imageLocation": "",
+                "title": "",
+                "location": "",
+                "productId": "",
+                "catRefId": "",
+                "quantity": 0,
+                "price": "",
+                "dynamicProperties": [
+                    {
+                        "items": [
+                            {
+                                "propertyId": "",
+                                "propertyLabel": "",
+                                "propertyType": "",
+                                "propertyValue": "",
+                                "externalPrice": "",
+                                "actionCode": ""
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "cartName": "",
+    "recommendations": {
+        "items": [
+            {
+                "title": "",
+                "description": "",
+                "longDescription": "",
+                "brand": "",
+                "location": "",
+                "imageLocation": "",
+                "listPrice": "",
+                "onSale": "",
+                "salePrice": "",
+                "priceRange": "",
+                "priceMax": "",
+                "priceMin": ""
+            }
+        ]
+    },
+    "currencyCode": "",
+    "secondaryCurrencyCode": "",
+    "exchangeRate": 0,
+    "orderHasMixedCurrencies": false,
+    "payTaxInSecondaryCurrency": false,
+    "payShippingInSecondaryCurrency": false
+}

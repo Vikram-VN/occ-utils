@@ -1,0 +1,17 @@
+{
+    "storeFrontHostName": "",
+    "wishListOwnerFirstName": "",
+    "wishListOwnerLastName": "",
+    "wishListId": "",
+    "wishListDisplayName": "",
+    "newMemberFirstName": "",
+    "newMemberLastName": "",
+    "recipientEmailAddress": "",
+    "newMemberProfileImageURL": "",
+    "wishListOwnerProfileImageURL": "",
+    "recipientFullName": "",
+    "organization": {
+        "name": "",
+        "logoUrl": ""
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "sitename": "",
+    "firstName": "",
+    "email": "",
+    "siteNames": "",
+    "organization": {
+        "name": "",
+        "logoUrl": ""
+    },
+    "organizationRemoved": {
+        "name": "",
+        "logoUrl": ""
+    },
+    "isDefaultOrganization": false,
+    "isLastOrganization": false,
+    "roles": "",
+    "password": "",
+    "resetPasswordLink": "",
+    "combinedOrgChangesMap": {
+        "newOrganizationAndRoles": {
+            "items": [
+                {}
+            ]
+        }
+    }
+}

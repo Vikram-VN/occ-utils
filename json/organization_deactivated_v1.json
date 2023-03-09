@@ -1,0 +1,20 @@
+{
+    "sitename": "",
+    "siteNames": "",
+    "firstName": "",
+    "email": {
+        "items": ""
+    },
+    "organization": {
+        "name": "",
+        "logoUrl": ""
+    },
+    "sites": {
+        "items": [
+            {
+                "name": "",
+                "url": ""
+            }
+        ]
+    }
+}

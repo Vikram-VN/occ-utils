@@ -1,0 +1,55 @@
+{
+    "storefrontUrl": "",
+    "sitename": "",
+    "firstName": "",
+    "locale": "",
+    "email": "",
+    "orderCancelReason": "",
+    "cancelReasonId": "",
+    "cancelledBySystem": false,
+    "orderDetails": {
+        "id": "",
+        "creationDate": "",
+        "creationTime": "",
+        "orderItems": {
+            "items": [
+                {
+                    "imageLocation": "",
+                    "title": "",
+                    "location": "",
+                    "quantity": 0,
+                    "productId": "",
+                    "catRefId": "",
+                    "preOrderedQuantity": 0,
+                    "backOrderedQuantity": 0,
+                    "availabilityDate": "",
+                    "price": "",
+                    "dynamicProperties": [
+                        {
+                            "items": [
+                                {
+                                    "propertyId": "",
+                                    "propertyLabel": "",
+                                    "propertyType": "",
+                                    "propertyValue": "",
+                                    "externalPrice": ""
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "organization": {
+        "name": "",
+        "logoUrl": "",
+        "taxReferenceNumber": "",
+        "vatReferenceNumber": "",
+        "taxExemptionCode": ""
+    },
+    "isQueuedOrder": false,
+    "isOrderPersisted": false,
+    "isOrderPriced": false,
+    "havePaymentsBeenHandled": false
+}

@@ -1,0 +1,19 @@
+{
+    "sitename": "",
+    "firstName": "",
+    "email": "",
+    "siteNames": "",
+    "organization": {
+        "name": "",
+        "logoUrl": ""
+    },
+    "roles": "",
+    "removedRoles": "",
+    "combinedRoleChangesMap": {
+        "rolesChangedPerOrganization": {
+            "items": [
+                {}
+            ]
+        }
+    }
+}

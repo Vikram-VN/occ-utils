@@ -1,0 +1,54 @@
+{
+    "storefrontUrl": "",
+    "sitename": "",
+    "product": {
+        "title": "",
+        "description": "",
+        "longDescription": "",
+        "productId": "",
+        "brand": "",
+        "productTaxCode": "",
+        "price": "",
+        "listPrice": "",
+        "onSale": "",
+        "salePrice": "",
+        "priceRange": "",
+        "priceMax": "",
+        "priceMin": "",
+        "shippingSurchargeValue": "",
+        "notForIndividualSale": "",
+        "arrivalDate": "",
+        "height": "",
+        "length": "",
+        "width": "",
+        "weight": "",
+        "orderLimit": "",
+        "excludefromXMLSitemap": "",
+        "skuConfigurable": "",
+        "skuActive": "",
+        "productActive": "",
+        "catRefId": "",
+        "imageLocation": "",
+        "location": "",
+        "variants": {
+            "items": [
+                {
+                    "optionName": "",
+                    "optionValue": "",
+                    "dynamicProperties": [
+                        {
+                            "items": [
+                                {
+                                    "propertyId": "",
+                                    "propertyLabel": "",
+                                    "propertyType": "",
+                                    "propertyValue": ""
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

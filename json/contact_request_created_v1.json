@@ -1,0 +1,21 @@
+{
+    "firstName": "",
+    "lastJobRunTime": "",
+    "currentTime": "",
+    "adminURL": "",
+    "profileRequests": {
+        "items": [
+            {
+                "id": "",
+                "profile": "",
+                "email": "",
+                "site": "",
+                "siteLocation": "",
+                "createdTime": "",
+                "createdBy": "",
+                "requestedOrganizationId": "",
+                "requestedOrganizationName": ""
+            }
+        ]
+    }
+}
