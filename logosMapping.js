@@ -21,7 +21,21 @@ accountsData.organization.map(organization => {
             console.log("Address not found")
     }
 
+    // const emailID = organization.x_punchoutCustomerEmail;
+
+    // if (emailID.includes("wm.com")) {
+    //     organization.organizationLogo = "/general/WM.png";
+    // } else if (emailID.includes("wm.com")) {
+    //     organization.organizationLogo = "/general/WM.png";
+    // } else if (emailID.includes("wm.com")) {
+    //     organization.organizationLogo = "/general/WM.png";
+    // } else if (emailID.includes("wm.com")) {
+    //     organization.organizationLogo = "/general/WM.png";
+    // } else if (emailID.includes("wm.com")) {
+    //     organization.organizationLogo = "/general/WM.png";
+    // }
+
 });
 
 
-fs.writeFileSync("./data/AccountsV2_New.json", JSON.stringify(accountsData), {encoding: "utf-8"});
+fs.writeFileSync("./data/AccountsV2_New.json", JSON.stringify(accountsData), { encoding: "utf-8" });
