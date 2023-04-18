@@ -6,6 +6,7 @@ node_modules/
  
 # Private Files
 data/*.json
+*.lock
 *.csv
 *.csv.gz
 *.tsv
