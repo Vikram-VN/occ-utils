@@ -46,6 +46,7 @@
             },
             "profileType": "b2b_user",
             "x_registeredDate": null,
+            "locale": "en",
             "email": null,
             "receiveEmail": "yes",
             "active": true,
