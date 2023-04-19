@@ -2,7 +2,7 @@ const fs = require("fs");
 const country = require('countrystatesjs');
 //The fs module enables interacting with the file system in a way modeled on standard POSIX functions
 
-const accounts = JSON.parse(fs.readFileSync('./data/accounts-refuse.json'));
+const accounts = JSON.parse(fs.readFileSync('./data/accounts-mixer.json'));
 
 
 const finalData = { organization: []};
@@ -103,4 +103,4 @@ finalData.organization.forEach(element => {
 });
 
 
-fs.writeFileSync("./data/accounts-refuse-new.json", JSON.stringify(finalData, null, 3));
+fs.writeFileSync("./data/accounts-mixer-new.json", JSON.stringify(finalData, null, 3));
