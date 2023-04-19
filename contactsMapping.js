@@ -34,10 +34,6 @@ contacts.forEach((contact, index) => {
     finalData.user[index] = template;
 });
 
-// Deleting unwanted fields from the data
-// finalData.user.forEach(element => {
-//     delete element.siteOrganizationProperties[0].properties.contract.repositoryId;
-// });
 
 // Saving the data into json file
 fs.writeFileSync("./data/contacts-mixer-new.json", JSON.stringify(finalData, null, 3));
