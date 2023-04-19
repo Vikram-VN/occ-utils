@@ -2,11 +2,14 @@ const fs = require("fs");
 const country = require('countrystatesjs');
 //The fs module enables interacting with the file system in a way modeled on standard POSIX functions
 
+
+// Reading data from the exported accounts
 const accounts = JSON.parse(fs.readFileSync('./data/accounts-mixer.json'));
 
 
 const finalData = { organization: []};
 
+//In original excel sheet the catalog names are different, so to get proper catalog names, we created this sites
 const sites = {
     Refuse: {
         id: "siteUS",
@@ -18,11 +21,14 @@ const sites = {
     }
 }
 
+// Iterating accounts to map the fields
 accounts.forEach((account, index) => {
-
+    // Using third-party library to get 2-letter abbreviations for states
     const countryState = country.state(account["Billing Address Country"], account["Billing Address State"])?.abbreviation;
+    // created new accounts templates that has a all required fields 
     const template = JSON.parse(fs.readFileSync('./data/AccountsTemplate.json'));
 
+    // Now we are doing fields mapping from data file to template
     template.siteOrganizationProperties[0].site.siteId = sites[account["Site Name"]].id;
     template.name = account["Account Name"];
     template.x_fleetCode = account["Fleet Code"];
@@ -46,7 +52,10 @@ accounts.forEach((account, index) => {
     template.secondaryAddresses[0].address.isDefaultBillingAddress = true;
     template.secondaryAddresses[0].address.isDefaultShippingAddress = false;
     template.secondaryAddresses[0].addressType = "Billing";
+    // removing last element from array (that is shipping address)
     template.secondaryAddresses.pop();
+
+    // Here we commented the shipping address, because client don't want that
 
     // template.shippingAddress.companyName = account["Billing Address Company Name"];
     // template.shippingAddress.address1 = account["Billing Address Line 1"];
@@ -60,10 +69,12 @@ accounts.forEach((account, index) => {
     // template.members[0].email = account["Contact Email"];
     // template.members[0].firstName = account["Contact First Name"];
     // template.members[0].lastName = account["Contact Last Name"];
+
+    // pushing this data into organization
     finalData.organization[index] = template;
 });
 
-// Deleting unwanted fields from the data
+// Deleting unwanted (these are not mandatory) fields from the data
 finalData.organization.forEach(element => {
     delete element.siteOrganizationProperties[0].properties.contract.repositoryId;
     delete element.siteOrganizationProperties[0].properties.contract.creationDate
@@ -102,5 +113,5 @@ finalData.organization.forEach(element => {
     delete element.members;
 });
 
-
+// saving this accounts data into a new file
 fs.writeFileSync("./data/accounts-mixer-new.json", JSON.stringify(finalData, null, 3));
