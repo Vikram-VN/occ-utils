@@ -52,63 +52,6 @@
                 }
             ],
             "id": null,
-            "relativeRoles": [
-                {
-                    "relativeTo": null,
-                    "function": "admin",
-                    "repositoryId": "1500041",
-                    "type": "organizationalRole",
-                    "category": {
-                        "displayName": "Storefront Roles",
-                        "repositoryId": "storefrontRoleCategory",
-                        "id": "storefrontRoleCategory"
-                    }
-                },
-                {
-                    "relativeTo": null,
-                    "function": "buyer",
-                    "repositoryId": "1500042",
-                    "type": "organizationalRole",
-                    "category": {
-                        "displayName": "Storefront Roles",
-                        "repositoryId": "storefrontRoleCategory",
-                        "id": "storefrontRoleCategory"
-                    }
-                },
-                {
-                    "relativeTo": null,
-                    "function": "approver",
-                    "repositoryId": "1500043",
-                    "type": "organizationalRole",
-                    "category": {
-                        "displayName": "Storefront Roles",
-                        "repositoryId": "storefrontRoleCategory",
-                        "id": "storefrontRoleCategory"
-                    }
-                },
-                {
-                    "relativeTo": null,
-                    "function": "accountAddressManager",
-                    "repositoryId": "1500044",
-                    "type": "organizationalRole",
-                    "category": {
-                        "displayName": "Storefront Roles",
-                        "repositoryId": "storefrontRoleCategory",
-                        "id": "storefrontRoleCategory"
-                    }
-                },
-                {
-                    "relativeTo": null,
-                    "function": "profileAddressManager",
-                    "repositoryId": "1500045",
-                    "type": "organizationalRole",
-                    "category": {
-                        "displayName": "Storefront Roles",
-                        "repositoryId": "storefrontRoleCategory",
-                        "id": "storefrontRoleCategory"
-                    }
-                }
-            ],
             "dunsNumber": null,
             "derivedAuthorizationCode": null,
             "derivedTaxReferenceNumber": null,

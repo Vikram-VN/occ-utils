@@ -31,8 +31,10 @@ accounts.forEach((account, index) => {
     // Now we are doing fields mapping from data file to template
     template.siteOrganizationProperties[0].site.siteId = sites[account["Site Name"]].id;
     template.name = account["Account Name"];
-    template.x_fleetCode = account["Fleet Code"];
-    template.x_billToAddressList = account["BillTo Address List"];
+    template.uniqueId = account["Unique Identification Number"]; 
+    template.x_fleetCode = account["Fleet Code"]; 
+    template.x_billToAddressList = account["BillTo Address List"]; 
+    template.x_punchoutCustomerEmail = account["Punchout Customer Email"]; 
     template.x_customerType = account["McNeilus Customer Type"];
     template.x_fleetNameJDE = account["Fleet Name (JDE)"];
     template.x_eightyByTwenty = account["80/20"];
@@ -92,13 +94,13 @@ finalData.organization.forEach(element => {
     delete element.vatReferenceNumber;
     delete element.taxExemptionCode;
     delete element.derivedType;
-    delete element.allowPunchoutShopping;
+    // delete element.allowPunchoutShopping;
     delete element.useAllShippingMethodsFromSite;
     delete element.derivedTaxExemptionCode;
     delete element.derivedAllowPunchoutShopping;
     delete element.derivedVatReferenceNumber;
     delete element.punchoutUserId;
-    delete element.uniqueId;
+    // delete element.uniqueId;
     delete element.lastModifiedTime;
     delete element.authorizationCode;
     delete element.derivedBillingAddress;
