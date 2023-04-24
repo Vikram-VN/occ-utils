@@ -1,100 +1,179 @@
 {
-            "taxReferenceNumber": null,
-            "siteOrganizationProperties": [
-                {
-                    "site": {
-                        "siteId": null
+    "taxReferenceNumber": null,
+    "siteOrganizationProperties": [
+        {
+            "site": {
+                "siteId": null
+            },
+            "properties": {
+                "useAllShippingMethodsFromSite": true,
+                "useAllPaymentMethodsFromSite": true,
+                "approvalRequired": false,
+                "contract": {
+                    "endDate": null,
+                    "terms": null,
+                    "catalog": {
+                        "id": null
                     },
-                    "properties": {
-                        "useAllShippingMethodsFromSite": true,
-                        "useAllPaymentMethodsFromSite": true,
-                        "approvalRequired": false,
-                        "contract": {
-                            "endDate": null,
-                            "terms": null,
-                            "catalog": {
-                                "id": null
-                            },
-                            "displayName": null,
-                            "repositoryId": null,
-                            "description": null,
-                            "priceListGroup": {
-                                "id": null
-                            },
-                            "creationDate": null,
-                            "externalContractReference": null,
-                            "startDate": null
-                        },
-                        "paymentMethods": [],
-                        "delegateApprovalManagement": false,
-                        "useExternalApprovalWebhook": false,
-                        "orderPriceLimit": null,
-                        "shippingMethods": []
-                    }
-                }
-            ],
-            "x_punchoutCustomerEmail": null,
-            "organizationLogo": null,
-            "delegateApprovalManagement": false,
-            "externalOrganizationId": null,
-            "source": null,
-            "type": null,
-            "parentOrganization": null,
-            "customerType": null,
-            "members": [
-                {
-                    "lastName": null,
-                    "firstName": null,
-                    "customerContactId": null,
-                    "middleName": null,
-                    "id": null,
-                    "email": null
-                }
-            ],
+                    "displayName": null,
+                    "repositoryId": null,
+                    "description": null,
+                    "priceListGroup": {
+                        "id": null
+                    },
+                    "creationDate": null,
+                    "externalContractReference": null,
+                    "startDate": null
+                },
+                "paymentMethods": [],
+                "delegateApprovalManagement": false,
+                "useExternalApprovalWebhook": false,
+                "orderPriceLimit": null,
+                "shippingMethods": []
+            }
+        },
+        {
+            "site": {
+                "siteId": null
+            },
+            "properties": {
+                "useAllShippingMethodsFromSite": true,
+                "useAllPaymentMethodsFromSite": true,
+                "approvalRequired": false,
+                "contract": {
+                    "endDate": null,
+                    "terms": null,
+                    "catalog": {
+                        "id": null
+                    },
+                    "displayName": null,
+                    "repositoryId": null,
+                    "description": null,
+                    "priceListGroup": {
+                        "id": null
+                    },
+                    "creationDate": null,
+                    "externalContractReference": null,
+                    "startDate": null
+                },
+                "paymentMethods": [],
+                "delegateApprovalManagement": false,
+                "useExternalApprovalWebhook": false,
+                "orderPriceLimit": null,
+                "shippingMethods": []
+            }
+        }
+    ],
+    "x_punchoutCustomerEmail": null,
+    "organizationLogo": null,
+    "delegateApprovalManagement": false,
+    "externalOrganizationId": null,
+    "source": null,
+    "type": null,
+    "parentOrganization": null,
+    "customerType": null,
+    "members": [
+        {
+            "lastName": null,
+            "firstName": null,
+            "customerContactId": null,
+            "middleName": null,
             "id": null,
-            "dunsNumber": null,
-            "derivedAuthorizationCode": null,
-            "derivedTaxReferenceNumber": null,
-            "contract": null,
-            "derivedCustomerType": null,
-            "active": true,
-            "vatReferenceNumber": null,
-            "taxExemptionCode": null,
-            "x_fleetNameJDE": null,
-            "derivedType": null,
-            "allowPunchoutShopping": true,
-            "useAllShippingMethodsFromSite": null,
-            "derivedTaxExemptionCode": null,
-            "approvalRequired": false,
-            "derivedAllowPunchoutShopping": true,
-            "derivedVatReferenceNumber": null,
-            "punchoutUserId": null,
-            "name": null,
-            "x_accountType": null,
-            "x_billToAddressList": null,
-            "ancestorOrganizations": [],
-            "x_fleetCode": null,
-            "uniqueId": null,
-            "lastModifiedTime": null,
-            "authorizationCode": null,
-            "x_eightyByTwenty": null,
-            "description": null,
-            "derivedBillingAddress": null,
-            "derivedUniqueId": null,
-            "organizationLogoURL": null,
-            "derivedContract": null,
-            "paymentMethods": [],
-            "x_billAddressList": null,
-            "x_customerType": null,
-            "shippingMethods": [],
-            "derivedDunsNumber": null,
-            "derivedOrganizationLogo": null,
-            "allSecondaryAddresses": {},
-            "orderPriceLimit": null,
-            "derivedShippingAddress": null,
-            "useAllPaymentMethodsFromSite": null,
-            "derivedDescription": null,
-            "billingAddress": {
+            "email": null
+        }
+    ],
+    "id": null,
+    "dunsNumber": null,
+    "derivedAuthorizationCode": null,
+    "derivedTaxReferenceNumber": null,
+    "contract": null,
+    "derivedCustomerType": null,
+    "active": true,
+    "vatReferenceNumber": null,
+    "taxExemptionCode": null,
+    "x_fleetNameJDE": null,
+    "derivedType": null,
+    "allowPunchoutShopping": true,
+    "useAllShippingMethodsFromSite": null,
+    "derivedTaxExemptionCode": null,
+    "approvalRequired": false,
+    "derivedAllowPunchoutShopping": true,
+    "derivedVatReferenceNumber": null,
+    "punchoutUserId": null,
+    "name": null,
+    "x_accountType": null,
+    "x_billToAddressList": null,
+    "ancestorOrganizations": [],
+    "x_fleetCode": null,
+    "uniqueId": null,
+    "lastModifiedTime": null,
+    "authorizationCode": null,
+    "x_eightyByTwenty": null,
+    "description": null,
+    "derivedBillingAddress": null,
+    "derivedUniqueId": null,
+    "organizationLogoURL": null,
+    "derivedContract": null,
+    "paymentMethods": [],
+    "x_billAddressList": null,
+    "x_customerType": null,
+    "shippingMethods": [],
+    "derivedDunsNumber": null,
+    "derivedOrganizationLogo": null,
+    "allSecondaryAddresses": {},
+    "orderPriceLimit": null,
+    "derivedShippingAddress": null,
+    "useAllPaymentMethodsFromSite": null,
+    "derivedDescription": null,
+    "billingAddress": {
+        "country": "US",
+        "types": [
+            "BILLING"
+        ],
+        "address3": null,
+        "city": null,
+        "address2": null,
+        "address1": null,
+        "postalCode": null,
+        "companyName": null,
+        "county": null,
+        "isDefaultBillingAddress": true,
+        "isDefaultShippingAddress": false,
+        "x_jdeBillingId": null,
+        "externalAddressId": null,
+        "phoneNumber": null,
+        "repositoryId": null,
+        "x_jdePreferenceBranch": null,
+        "state": null,
+        "id": null,
+        "x_jdeShippingId": null
+    },
+    "shippingAddress": {
+        "country": "US",
+        "types": [
+            "SHIPPING"
+        ],
+        "address3": null,
+        "city": null,
+        "address2": null,
+        "address1": null,
+        "postalCode": null,
+        "companyName": null,
+        "county": null,
+        "isDefaultBillingAddress": false,
+        "isDefaultShippingAddress": true,
+        "x_jdeBillingId": null,
+        "externalAddressId": null,
+        "phoneNumber": null,
+        "repositoryId": null,
+        "x_jdePreferenceBranch": null,
+        "state": null,
+        "id": null,
+        "x_jdeShippingId": null
+    },
+    "secondaryAddresses": [
+        {
+            "address": {
                 "country": "US",
                 "types": [
                     "BILLING"
@@ -117,7 +196,10 @@
                 "id": null,
                 "x_jdeShippingId": null
             },
-            "shippingAddress": {
+            "addressType": "Billing"
+        },
+        {
+            "address": {
                 "country": "US",
                 "types": [
                     "SHIPPING"
@@ -140,59 +222,8 @@
                 "id": null,
                 "x_jdeShippingId": null
             },
-            "secondaryAddresses": [
-                {
-                    "address": {
-                        "country": "US",
-                        "types": [
-                            "BILLING"
-                        ],
-                        "address3": null,
-                        "city": null,
-                        "address2": null,
-                        "address1": null,
-                        "postalCode": null,
-                        "companyName": null,
-                        "county": null,
-                        "isDefaultBillingAddress": true,
-                        "isDefaultShippingAddress": false,
-                        "x_jdeBillingId": null,
-                        "externalAddressId": null,
-                        "phoneNumber": null,
-                        "repositoryId": null,
-                        "x_jdePreferenceBranch": null,
-                        "state": null,
-                        "id": null,
-                        "x_jdeShippingId": null
-                    },
-                    "addressType": "Billing"
-                },
-                {
-                    "address": {
-                        "country": "US",
-                        "types": [
-                            "SHIPPING"
-                        ],
-                        "address3": null,
-                        "city": null,
-                        "address2": null,
-                        "address1": null,
-                        "postalCode": null,
-                        "companyName": null,
-                        "county": null,
-                        "isDefaultBillingAddress": false,
-                        "isDefaultShippingAddress": true,
-                        "x_jdeBillingId": null,
-                        "externalAddressId": null,
-                        "phoneNumber": null,
-                        "repositoryId": null,
-                        "x_jdePreferenceBranch": null,
-                        "state": null,
-                        "id": null,
-                        "x_jdeShippingId": null
-                    },
-                    "addressType": "Shipping"
-                }
-            ],
-            "useExternalApprovalWebhook": false
+            "addressType": "Shipping"
         }
+    ],
+    "useExternalApprovalWebhook": false
+}

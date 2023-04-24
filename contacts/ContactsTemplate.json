@@ -1,58 +1,54 @@
 {
-    "user": [
+    "roles": [
         {
-            "roles": [
+            "associations": [
                 {
-                    "associations": [
-                        {
-                            "relatedItemId": null,
-                            "type": "organization"
-                        }
-                    ],
-                    "relativeTo": {
-                        "externalOrganizationId": null,
-                        "id": null
-                    },
-                    "function": "buyer",
-                    "type": "organizationalRole",
-                    "category": {
-                        "displayName": "Storefront Roles",
-                        "repositoryId": "storefrontRoleCategory",
-                        "id": "storefrontRoleCategory"
-                    }
-                },
-                {
-                    "associations": [
-                        {
-                            "relatedItemId": null,
-                            "type": "organization"
-                        }
-                    ],
-                    "relativeTo": {
-                        "externalOrganizationId": null,
-                        "id": null
-                    },
-                    "function": "admin",
-                    "type": "organizationalRole",
-                    "category": {
-                        "displayName": "Storefront Roles",
-                        "repositoryId": "storefrontRoleCategory",
-                        "id": "storefrontRoleCategory"
-                    }
+                    "relatedItemId": null,
+                    "type": "organization"
                 }
             ],
-            "parentOrganization": {
+            "relativeTo": {
+                "externalOrganizationId": null,
                 "id": null
             },
-            "profileType": "b2b_user",
-            "x_registeredDate": null,
-            "locale": "en",
-            "email": null,
-            "receiveEmail": "yes",
-            "active": true,
-            "x_phoneNumber": "null",
-            "firstName": "Christian",
-            "lastName": "Hanson"
+            "function": "buyer",
+            "type": "organizationalRole",
+            "category": {
+                "displayName": "Storefront Roles",
+                "repositoryId": "storefrontRoleCategory",
+                "id": "storefrontRoleCategory"
+            }
+        },
+        {
+            "associations": [
+                {
+                    "relatedItemId": null,
+                    "type": "organization"
+                }
+            ],
+            "relativeTo": {
+                "externalOrganizationId": null,
+                "id": null
+            },
+            "function": "admin",
+            "type": "organizationalRole",
+            "category": {
+                "displayName": "Storefront Roles",
+                "repositoryId": "storefrontRoleCategory",
+                "id": "storefrontRoleCategory"
+            }
         }
-    ]
+    ],
+    "parentOrganization": {
+        "id": null
+    },
+    "profileType": "b2b_user",
+    "x_registeredDate": null,
+    "locale": "en",
+    "email": null,
+    "receiveEmail": "no",
+    "active": true,
+    "x_phoneNumber": null,
+    "firstName": null,
+    "lastName": null
 }

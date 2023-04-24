@@ -2,8 +2,8 @@ const fs = require("fs");
 //The fs module enables interacting with the file system in a way modeled on standard POSIX functions
 
 // Reading data from the accounts and contacts
-const accounts = JSON.parse(fs.readFileSync('./data/AccountsV2.json')).organization;
-const contacts = JSON.parse(fs.readFileSync('./data/accounts-mixer.json'));
+const accounts = JSON.parse(fs.readFileSync('../data/AccountsV2.json')).organization;
+const contacts = JSON.parse(fs.readFileSync('../data/Regular_non-punchout_accounts_that_are_both_refuse_and_mixer/accounts-non-punchout(one-to-many).json'));
 
 // Temporarily storing data here, later on this will be saved into json file
 const finalData = { user: [] };
@@ -11,7 +11,7 @@ const finalData = { user: [] };
 // Iterating contacts to do fields mapping
 contacts.forEach((contact, index) => {
     // Created a contacts import template with all required fields so it will be easy now to do mapping
-    const template = JSON.parse(fs.readFileSync('./data/ContactsTemplate.json'));
+    const template = JSON.parse(fs.readFileSync('./ContactsTemplate.json'));
 
     // Trying to get valid organization id for the current contact
     const organizationId = accounts.filter(org => {
@@ -36,4 +36,4 @@ contacts.forEach((contact, index) => {
 
 
 // Saving the data into json file
-fs.writeFileSync("./data/contacts-mixer-new.json", JSON.stringify(finalData, null, 3));
+fs.writeFileSync("../data/Regular_non-punchout_accounts_that_are_both_refuse_and_mixer/contacts-non-punchout(one-to-many).json", JSON.stringify(finalData, null, 3));
