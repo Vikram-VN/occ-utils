@@ -2,9 +2,11 @@
   "name": "fields-mapping",
   "version": "1.0.0",
   "description": "I am lazy",
-  "main": "startMapping.js",
+  "main": "xlsToJson.js",
   "scripts": {
-    "test": "node startMapping.js"
+    "convert-to-json": "node xlsToJson.js",
+    "account-map": "node ./accounts/accountsMapping.js",
+    "contact-map": "node ./contacts/contactsMapping.js"
   },
   "author": "",
   "license": "ISC",

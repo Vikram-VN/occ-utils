@@ -2,15 +2,15 @@ const fs = require("fs");
 //The fs module enables interacting with the file system in a way modeled on standard POSIX functions
 
 // Reading data from the accounts and contacts
-const accounts = JSON.parse(fs.readFileSync('../data/AccountsV2.json')).organization;
-const contacts = JSON.parse(fs.readFileSync('../data/Regular_non-punchout_accounts_that_are_both_refuse_and_mixer/accounts-non-punchout(one-to-many).json'));
+const accounts = JSON.parse(fs.readFileSync('../data/AccountsV2_DEV.json')).organization; // Exported accounts
+const contacts = JSON.parse(fs.readFileSync('../data/accountsV2.json')); // Xls to json converted data
 
 // Temporarily storing data here, later on this will be saved into json file
 const finalData = { user: [] };
 
 // Iterating contacts to do fields mapping
 contacts.forEach((contact, index) => {
-    // Created a contacts import template with all required fields so it will be easy now to do mapping
+    // Loading contacts template with all required fields, So it will be easy now to do mapping
     const template = JSON.parse(fs.readFileSync('./ContactsTemplate.json'));
 
     // Trying to get valid organization id for the current contact
@@ -36,4 +36,4 @@ contacts.forEach((contact, index) => {
 
 
 // Saving the data into json file
-fs.writeFileSync("../data/Regular_non-punchout_accounts_that_are_both_refuse_and_mixer/contacts-non-punchout(one-to-many).json", JSON.stringify(finalData, null, 3));
+fs.writeFileSync("../data/Profiles.json", JSON.stringify(finalData, null, 3));

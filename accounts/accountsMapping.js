@@ -4,7 +4,7 @@ let State = require('country-state-city').State;
 
 
 // Reading data from the exported accounts
-const accounts = JSON.parse(fs.readFileSync('../data/Regular_non-punchout_accounts_that_are_both_refuse_and_mixer/accounts-non-punchout(one-to-one).json'));
+const accounts = JSON.parse(fs.readFileSync('../data/accountsV2.json'));
 
 
 const finalData = { organization: [] };
@@ -27,28 +27,22 @@ accounts.forEach((account, index) => {
     const countryState = State.getStatesOfCountry(account["Billing Address Country"]).find((state) => {
         return state.name === account["Billing Address State"];
     })?.isoCode;
-    // created new accounts templates that has a all required fields 
+    // Loading accounts templates that has a all required fields 
     const template = JSON.parse(fs.readFileSync('./AccountsTemplate.json'));
 
-    // Now we are doing fields mapping from data file to template
+    // Now we are doing fields mapping to template
+    template.siteOrganizationProperties[0].site.siteId = sites[account["Site Name"]].id;
     template.name = account["Account Name"];
-    // template.uniqueId = account["Unique Identification Number"]; 
+    template.uniqueId = account["Unique Identification Number"];
     template.x_fleetCode = account["Fleet Code"];
     template.x_billToAddressList = account["BillTo Address List"];
-    // template.x_punchoutCustomerEmail = account["Punchout Customer Email"]; 
+    template.x_punchoutCustomerEmail = account["Punchout Customer Email"];
     template.x_customerType = account["McNeilus Customer Type"];
     template.x_fleetNameJDE = account["Fleet Name (JDE)"];
     template.x_eightyByTwenty = account["80/20"];
-    template.siteOrganizationProperties[0].site.siteId = sites["Refuse"].id;
     template.siteOrganizationProperties[0].properties.contract.displayName = account["Contract Name"];
     template.siteOrganizationProperties[0].properties.contract.priceListGroup.id = account["Price Group"];
-    template.siteOrganizationProperties[0].properties.contract.catalog.id = sites["Refuse"].catalogId;
-
-    template.siteOrganizationProperties[1].site.siteId = sites["Mixer"].id;
-    template.siteOrganizationProperties[1].properties.contract.displayName = account["Contract Name"];
-    template.siteOrganizationProperties[1].properties.contract.priceListGroup.id = account["Price Group"];
-    template.siteOrganizationProperties[1].properties.contract.catalog.id = sites["Mixer"].catalogId;
-
+    template.siteOrganizationProperties[0].properties.contract.catalog.id = sites[account["Catalog"]].catalogId;
     template.derivedOrganizationLogo = account["Logo File Name"] ?? null;
 
     template.secondaryAddresses[0].address.companyName = account["Billing Address Company Name"];
@@ -65,7 +59,7 @@ accounts.forEach((account, index) => {
     // removing last element from array (that is shipping address)
     template.secondaryAddresses.pop();
 
-    // Here we commented the shipping address, because client don't want that
+    // Here we commented the shipping address, because don't want that
 
     // template.shippingAddress.companyName = account["Billing Address Company Name"];
     // template.shippingAddress.address1 = account["Billing Address Line 1"];
@@ -90,6 +84,7 @@ finalData.organization.forEach(element => {
     delete element.siteOrganizationProperties[0].properties.contract.creationDate
 
     delete element.secondaryAddresses[0].address.id;
+    delete element.siteOrganizationProperties.pop();
     delete element.billingAddress;
     delete element.useExternalApprovalWebhook;
     delete element.shippingAddress;
@@ -102,13 +97,13 @@ finalData.organization.forEach(element => {
     delete element.vatReferenceNumber;
     delete element.taxExemptionCode;
     delete element.derivedType;
-    delete element.allowPunchoutShopping;
+    // delete element.allowPunchoutShopping;
     delete element.useAllShippingMethodsFromSite;
     delete element.derivedTaxExemptionCode;
     delete element.derivedAllowPunchoutShopping;
     delete element.derivedVatReferenceNumber;
     delete element.punchoutUserId;
-    delete element.uniqueId;
+    // delete element.uniqueId;
     delete element.lastModifiedTime;
     delete element.authorizationCode;
     delete element.derivedBillingAddress;
@@ -124,4 +119,4 @@ finalData.organization.forEach(element => {
 });
 
 // saving this accounts data into a new file
-fs.writeFileSync("../data/Regular_non-punchout_accounts_that_are_both_refuse_and_mixer/accounts-non-punchout(one-to-one)-new.json", JSON.stringify(finalData, null, 3));
+fs.writeFileSync("../data/accountsV2-New.json", JSON.stringify(finalData, null, 3));
