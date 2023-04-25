@@ -26,7 +26,7 @@ failedAccounts.forEach((account) => {
                 break;
             case 1:
                 const countryState = State.getStatesOfCountry(failedAccount.secondaryAddresses[0].address.country).find((state) => {
-                    return state.name === account["Recommended Action from business"];
+                    return account["Recommended Action from business"].includes(state.name);
                 })?.isoCode;
                 failedAccount.secondaryAddresses[0].address.state = countryState;
                 break;

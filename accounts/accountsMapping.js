@@ -25,7 +25,7 @@ const sites = {
 accounts.forEach((account, index) => {
     // Using third-party library to get 2-letter abbreviations for states
     const countryState = State.getStatesOfCountry(account["Billing Address Country"]).find((state) => {
-        return state.name === account["Billing Address State"];
+        return account["Billing Address State"].includes(state.name);
     })?.isoCode;
     // Loading accounts templates that has a all required fields 
     const template = JSON.parse(fs.readFileSync('./AccountsTemplate.json'));
