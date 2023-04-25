@@ -26,10 +26,10 @@ const httpCall = async (orgName) => {
 
 }
 
-const list = JSON.stringify(fs.readFileSync('./data/allOrganizationsData.json')).organization;
+const list = JSON.parse(fs.readFileSync('./data/allOrganizationsData.json')).organization;
 
 [...new Set(list)].forEach(async (org) => {
-    await httpCall(org);
+    await httpCall(org.name);
 })
 
 // console.log([...new Set(list.split(`
