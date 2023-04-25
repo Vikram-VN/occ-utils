@@ -2,8 +2,8 @@ const fs = require("fs");
 //The fs module enables interacting with the file system in a way modeled on standard POSIX functions
 
 // Reading data from the accounts and contacts
-const accounts = JSON.parse(fs.readFileSync('../data/AccountsV2_DEV.json')).organization; // Exported accounts
-const contacts = JSON.parse(fs.readFileSync('../data/accountsV2.json')); // Xls to json converted data
+const accounts = JSON.parse(fs.readFileSync('./data/AccountsV2_DEV.json')).organization; // Exported accounts
+const contacts = JSON.parse(fs.readFileSync('./data/accountsV2.json')); // Xls to json converted data
 
 // Temporarily storing data here, later on this will be saved into json file
 const finalData = { user: [] };

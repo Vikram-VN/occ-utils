@@ -4,7 +4,7 @@ let State = require('country-state-city').State;
 
 
 // Reading data from the exported accounts
-const accounts = JSON.parse(fs.readFileSync('../data/accountsV2.json'));
+const accounts = JSON.parse(fs.readFileSync('./data/accounts.json'));
 
 
 const finalData = { organization: [] };
@@ -119,4 +119,4 @@ finalData.organization.forEach(element => {
 });
 
 // saving this accounts data into a new file
-fs.writeFileSync("../data/accountsV2-New.json", JSON.stringify(finalData, null, 3));
+fs.writeFileSync("./data/accountsV2-New.json", JSON.stringify(finalData, null, 3));
