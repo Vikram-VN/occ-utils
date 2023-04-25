@@ -34,6 +34,9 @@ contacts.forEach((contact, index) => {
     finalData.user[index] = template;
 });
 
+finalData.user = [...new Set(finalData.user)];
+
+console.log("Totoal records are: ", finalData.user.length);
 
 // Saving the data into json file
 fs.writeFileSync("../data/Profiles.json", JSON.stringify(finalData, null, 3));

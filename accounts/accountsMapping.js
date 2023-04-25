@@ -118,5 +118,9 @@ finalData.organization.forEach(element => {
     delete element.members;
 });
 
+finalData.organization = [...new Set(finalData.organization)];
+
+console.log("Totoal records are: ", finalData.organization.length);
+
 // saving this accounts data into a new file
 fs.writeFileSync("./data/accountsV2-New.json", JSON.stringify(finalData, null, 3));
