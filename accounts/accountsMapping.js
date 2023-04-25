@@ -4,7 +4,7 @@ let State = require('country-state-city').State;
 
 
 // Reading data from the exported accounts
-const accounts = JSON.parse(fs.readFileSync('./data/accounts.json'));
+const accounts = JSON.parse(fs.readFileSync('./data/Regular_non-punchout_Accounts_Ref_and_Mix/accounts-non-punchout-refuse(one-to-one).json'));
 
 
 const finalData = { organization: [] };
@@ -28,7 +28,7 @@ accounts.forEach((account, index) => {
         return account["Billing Address State"].includes(state.name);
     })?.isoCode;
     // Loading accounts templates that has a all required fields 
-    const template = JSON.parse(fs.readFileSync('./AccountsTemplate.json'));
+    const template = JSON.parse(fs.readFileSync('./accounts/AccountsTemplate.json'));
 
     // Now we are doing fields mapping to template
     template.siteOrganizationProperties[0].site.siteId = sites[account["Site Name"]].id;
@@ -123,4 +123,4 @@ finalData.organization = [...new Set(finalData.organization)];
 console.log("Totoal records are: ", finalData.organization.length);
 
 // saving this accounts data into a new file
-fs.writeFileSync("./data/accountsV2-New.json", JSON.stringify(finalData, null, 3));
+fs.writeFileSync("./data/Regular_non-punchout_Accounts_Ref_and_Mix/accounts-non-punchout-refuse(one-to-one)-new.json", JSON.stringify(finalData, null, 3));
