@@ -27,10 +27,21 @@ const httpCall = async (orgName) => {
 }
 
 const list = JSON.parse(fs.readFileSync('./data/allOrganizationsData.json')).organization;
+const acs = JSON.parse(fs.readFileSync('./data/AccountsV2_PRD.json')).organization;
 
-[...new Set(list)].forEach(async (org) => {
-    await httpCall(org.name);
+acs.forEach((ac)=> {
+    const checkAc = list.find((item)=> item.name === ac.name);
+
+    if(checkAc){
+        console.log('Found: ', ac.name);
+    }else{
+        console.log('Not Found: ', ac.name);
+    }
 })
+
+// [...new Set(list)].forEach(async (org) => {
+//     await httpCall(org.name);
+// })
 
 // console.log([...new Set(list.split(`
 // `))].length)
