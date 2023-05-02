@@ -29,13 +29,17 @@ const httpCall = async (orgName) => {
 const list = JSON.parse(fs.readFileSync('./data/allOrganizationsData.json')).organization;
 const acs = JSON.parse(fs.readFileSync('./data/AccountsV2_PRD.json')).organization;
 
-acs.forEach((ac)=> {
-    const checkAc = list.find((item)=> item.name === ac.name);
+acs.forEach((ac) => {
+    const checkAc = list.find((item) => {
+        return item.name === ac.name
+    });
 
-    if(checkAc){
-        console.log('Found: ', ac.name);
-    }else{
-        console.log('Not Found: ', ac.name);
+    if (checkAc?.name) {
+        // console.log('Found: ', ac.name);
+    } else {
+        if (!ac.name.includes('@')) {
+            console.log('Not Found: ', ac.name);
+        }
     }
 })
 
