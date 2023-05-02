@@ -20,7 +20,7 @@ try {
 				colorLog.error(err);
 			} else {
 				logger.info(result);
-				colorLog.success("Successfully converted excel data into json");
+				colorLog.success("Successfully converted excel data into json\n File data is converted into JSON, please check the 'data' folder.");
 			}
 		}
 	);
