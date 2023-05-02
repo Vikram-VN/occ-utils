@@ -44,7 +44,7 @@ try {
         colorLog.info("Something went wrong with the input and output data, please check") && logger.error(finalData);
 
     // Saving the data into json file
-    fs.writeFileSync("./data/Profiles.json", JSON.stringify(finalData, null, 3));
+    fs.writeFileSync("./data/Profiles-new.json", JSON.stringify(finalData, null, 3));
 
 } catch (error) {
     colorLog.error(error) && logger.error(error);
