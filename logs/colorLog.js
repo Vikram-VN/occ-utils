@@ -1,6 +1,7 @@
 const log = require('node-color-log');
 const winston = require('winston');
 
+// The common color log function does nothing except color the terminal output.
 const colorLog = () => {
     return {
         success: msg => log.color("green").log(`\n Time# ${new Date().toISOString()}: \n ${msg} \n\n`),
@@ -10,6 +11,7 @@ const colorLog = () => {
     }
 }
 
+// Saving the logs for reference
 const logger = winston.createLogger({
 	transports: [
 		new winston.transports.File({ filename: './logs/excel-json/error.log', level: 'error' }),
@@ -17,6 +19,7 @@ const logger = winston.createLogger({
 	],
 });
 
+// Accounts log function
 const accountsLogger = winston.createLogger({
 	transports: [
 		new winston.transports.File({ filename: './logs/accounts/error.log', level: 'error' }),
@@ -24,6 +27,7 @@ const accountsLogger = winston.createLogger({
 	],
 });
 
+// Contacts log function
 const contactsLogger = winston.createLogger({
 	transports: [
 		new winston.transports.File({ filename: './logs/contacts/error.log', level: 'error' }),

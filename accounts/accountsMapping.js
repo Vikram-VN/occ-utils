@@ -13,7 +13,7 @@ try {
 
     const finalData = { organization: [] };
 
-    //In original excel sheet the catalog names are different, so to get proper catalog names, we created this sites
+    // In the original Excel sheet, the catalogue names are different, so to get proper catalogue names, we created this site.
     const sites = {
         Refuse: {
             id: "siteUS",
@@ -31,10 +31,10 @@ try {
         const countryState = State.getStatesOfCountry(account["Billing Address Country"]).find((state) => {
             return state.name === account["Billing Address State"];
         })?.isoCode;
-        // Loading accounts templates that has a all required fields 
+        // Loading account templates that have all required fields
         const template = JSON.parse(fs.readFileSync('./accounts/AccountsTemplate.json'));
 
-        // Now we are doing fields mapping to template
+        // Now we are mapping fields to templates.
         template.siteOrganizationProperties[0].site.siteId = sites[account["Site Name"]].id;
         template.name = account["Account Name"];
         template.uniqueId = account["Unique Identification Number"];
@@ -65,7 +65,7 @@ try {
         // removing last element from array (that is shipping address)
         template.secondaryAddresses.pop();
 
-        // Here we commented the shipping address, because don't want that
+        // Here we commented on the shipping address because we don't want that.
 
         // template.shippingAddress.companyName = account["Billing Address Company Name"];
         // template.shippingAddress.address1 = account["Billing Address Line 1"];
@@ -76,7 +76,7 @@ try {
         // template.shippingAddress.postalCode = account["Billing Address Zip"];
         // template.shippingAddress.country = account["Billing Address Country"];
 
-        // pushing this data into organization
+        // Pushing this data into organization
         finalData.organization[index] = template;
     });
 
@@ -125,7 +125,7 @@ try {
         colorLog.success("Mapping for accounts is completed\n Please check 'data' folder with a name 'accountsV2-New.json' to view the data.") && logger.info(finalData) :
         colorLog.info("Something went wrong with the input and output data, please check.") && logger.error(finalData);
 
-    // saving this accounts data into a new file
+    // Saving these accounts' data into a new file
     fs.writeFileSync("./data/accountsV2-New.json", JSON.stringify(finalData, null, 3));
 
 } catch (error) {
