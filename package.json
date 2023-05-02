@@ -4,7 +4,7 @@
   "description": "OCC accounts and contacts import utilities by ApexIT",
   "main": "xlsToJson.js",
   "scripts": {
-    "convert": "node xlsToJson.js",
+    "convert": "node xlsToJson.js convert",
     "accounts": "node ./accounts/accountsMapping.js",
     "contacts": "node ./contacts/contactsMapping.js"
   },

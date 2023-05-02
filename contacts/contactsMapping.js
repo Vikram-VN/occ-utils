@@ -45,6 +45,7 @@ try {
 
     // Saving the data into json file
     fs.writeFileSync("./data/Profiles.json", JSON.stringify(finalData, null, 3));
+
 } catch (error) {
     colorLog.error(error) && logger.error(error);
 }
