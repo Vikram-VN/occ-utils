@@ -76,10 +76,6 @@ try {
         // template.shippingAddress.postalCode = account["Billing Address Zip"];
         // template.shippingAddress.country = account["Billing Address Country"];
 
-        // template.members[0].email = account["Contact Email"];
-        // template.members[0].firstName = account["Contact First Name"];
-        // template.members[0].lastName = account["Contact Last Name"];
-
         // pushing this data into organization
         finalData.organization[index] = template;
     });
