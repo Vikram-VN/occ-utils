@@ -1,5 +1,13 @@
 node_modules
-**/data
+
+# Ingoring data files
+**/data/*[.json, .xlsx, .csv]
+
+# Vscode settings
 .vscode
+
+# Logs
 **/*.log
+
+# Lock files
 yarn.lock
