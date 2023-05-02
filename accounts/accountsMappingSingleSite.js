@@ -74,6 +74,10 @@ try {
         // template.secondaryAddresses[1].state = countryState ? countryState : account["Billing Address State"] + " needToUpdate";
         // template.secondaryAddresses[1].postalCode = account["Billing Address Zip"];
         // template.secondaryAddresses[1].country = account["Billing Address Country"];
+        // template.secondaryAddresses[1].address.isDefaultBillingAddress = false;
+        // template.secondaryAddresses[1].address.isDefaultShippingAddress = true;
+        // template.secondaryAddresses[1].addressType = "Shipping";
+
 
         // removing last element from array (that is shipping address)
         template.secondaryAddresses.pop();
@@ -91,6 +95,7 @@ try {
 
 
         delete element.secondaryAddresses[0].address.id;
+        delete element.secondaryAddresses[1]?.address.id;
         delete element.billingAddress;
         delete element.useExternalApprovalWebhook;
         delete element.shippingAddress;
