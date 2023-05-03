@@ -5,8 +5,7 @@
   "main": "xlsToJson.js",
   "scripts": {
     "convert": "node xlsToJson.js",
-    "accounts-single": "node ./accounts/accountsMappingSingleSite.js",
-    "accounts-multi": "node ./accounts/accountsMappingMultiSite.js",
+    "accounts": "node ./accounts/accountsMapping.js",
     "contacts": "node ./contacts/contactsMapping.js"
   },
   "author": "ApexIT",
