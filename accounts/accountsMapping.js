@@ -27,15 +27,15 @@ try {
 
     // Iterating accounts to map the fields
     accounts.forEach((account, index) => {
+
         // Using third-party library to get 2-letter abbreviations for states
         const countryState = State.getStatesOfCountry(account["Billing Address Country"]).find((state) => {
-            return state.name === account["Billing Address State"];
+            return account["Billing Address State"].toLowerCase().includes(state.name.toLowerCase());
         })?.isoCode;
-        // Loading account templates that have all required fields
+        // Loading accounts templates that has a all required fields 
         const template = JSON.parse(fs.readFileSync('./accounts/AccountsTemplate.json'));
 
-        // Now we are mapping fields to templates.
-
+        // Now we are doing fields mapping to template
         template.name = account["Account Name"];
         template.uniqueId = account["Unique Identification Number"];
         template.x_fleetCode = account["Fleet Code"];
@@ -45,15 +45,23 @@ try {
         template.x_fleetNameJDE = account["Fleet Name (JDE)"];
         template.x_eightyByTwenty = account["80/20"];
 
-        template.siteOrganizationProperties[0].site.siteId = sites["Refuse"].id;
-        template.siteOrganizationProperties[0].properties.contract.displayName = account["Contract Name"];
-        template.siteOrganizationProperties[0].properties.contract.priceListGroup.id = account["Price Group"];
-        template.siteOrganizationProperties[0].properties.contract.catalog.id = sites["Refuse"].catalogId;
+        if (account["Site Name"].toLowerCase().includes("both")) {
+            template.siteOrganizationProperties[0].site.siteId = sites["Refuse"].id;
+            template.siteOrganizationProperties[0].properties.contract.displayName = account["Contract Name"];
+            template.siteOrganizationProperties[0].properties.contract.priceListGroup.id = account["Price Group"];
+            template.siteOrganizationProperties[0].properties.contract.catalog.id = sites["Refuse"].catalogId;
 
-        template.siteOrganizationProperties[1].site.siteId = sites["Mixer"].id;
-        template.siteOrganizationProperties[1].properties.contract.displayName = account["Contract Name"];
-        template.siteOrganizationProperties[1].properties.contract.priceListGroup.id = account["Price Group"];
-        template.siteOrganizationProperties[1].properties.contract.catalog.id = sites["Mixer"].catalogId;
+            template.siteOrganizationProperties[1].site.siteId = sites["Mixer"].id;
+            template.siteOrganizationProperties[1].properties.contract.displayName = account["Contract Name"];
+            template.siteOrganizationProperties[1].properties.contract.priceListGroup.id = account["Price Group"];
+            template.siteOrganizationProperties[1].properties.contract.catalog.id = sites["Mixer"].catalogId;
+
+        } else {
+            template.siteOrganizationProperties[0].site.siteId = sites[account["Site Name"]].id;
+            template.siteOrganizationProperties[0].properties.contract.displayName = account["Contract Name"];
+            template.siteOrganizationProperties[0].properties.contract.priceListGroup.id = account["Price Group"];
+            template.siteOrganizationProperties[0].properties.contract.catalog.id = sites[account["Catalog"]].catalogId;
+        }
 
         template.derivedOrganizationLogo = account["Logo File Name"] ?? null;
 
@@ -83,9 +91,6 @@ try {
         // template.secondaryAddresses[1].address.isDefaultShippingAddress = true;
         // template.secondaryAddresses[1].addressType = "Shipping";
 
-        // removing last element from array (that is shipping address)
-        template.secondaryAddresses.pop();
-
         // Pushing this data into organization
         finalData.organization[index] = template;
     });
@@ -94,11 +99,19 @@ try {
     finalData.organization.forEach(element => {
         delete element.siteOrganizationProperties[0].properties.contract.repositoryId;
         delete element.siteOrganizationProperties[0].properties.contract.creationDate;
-        delete element.siteOrganizationProperties[1].properties.contract.repositoryId;
-        delete element.siteOrganizationProperties[1].properties.contract.creationDate;
 
-        delete element.secondaryAddresses[0].address.id;
-        delete element.secondaryAddresses[1]?.address.id;
+        if (element.siteOrganizationProperties[1]?.site?.siteId) {
+            delete element.siteOrganizationProperties[1]?.properties.contract.repositoryId;
+            delete element.siteOrganizationProperties[1]?.properties.contract.creationDate;
+        }
+
+
+        delete element.secondaryAddresses[0].address.id
+        element.secondaryAddresses[1]?.address?.companyName && delete element.secondaryAddresses[1].address.id;
+        // Removing second site properties because we don't have a data for it
+        !element.siteOrganizationProperties[1]?.site?.siteId && delete element.siteOrganizationProperties.pop();
+        // Removing last element from array (that is shipping address)
+        !element.secondaryAddresses[1]?.address?.companyName && element.secondaryAddresses.pop();
         delete element.billingAddress;
         delete element.useExternalApprovalWebhook;
         delete element.shippingAddress;
