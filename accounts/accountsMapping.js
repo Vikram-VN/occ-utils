@@ -41,6 +41,7 @@ try {
         template.x_fleetCode = account["Fleet Code"];
         template.x_billToAddressList = account["BillTo Address List"];
         template.x_punchoutCustomerEmail = account["Punchout Customer Email"];
+        template.allowPunchoutShopping = account["Punchout"]?.toLowerCase() || false;
         template.x_customerType = account["McNeilus Customer Type"];
         template.x_fleetNameJDE = account["Fleet Name (JDE)"];
         template.x_eightyByTwenty = account["80/20"];
@@ -124,13 +125,11 @@ try {
         delete element.vatReferenceNumber;
         delete element.taxExemptionCode;
         delete element.derivedType;
-        // delete element.allowPunchoutShopping;
         delete element.useAllShippingMethodsFromSite;
         delete element.derivedTaxExemptionCode;
         delete element.derivedAllowPunchoutShopping;
         delete element.derivedVatReferenceNumber;
         delete element.punchoutUserId;
-        // delete element.uniqueId;
         delete element.lastModifiedTime;
         delete element.authorizationCode;
         delete element.derivedBillingAddress;
@@ -151,7 +150,8 @@ try {
         colorLog.info("Something went wrong with the input and output data, please check.") && logger.error(finalData);
 
     // Saving these accounts' data into a new file
-    fs.writeFileSync("./data/accountsV2-New.json", JSON.stringify(finalData, null, 3));
+    const outputFile = "./data/accountsV2-New.json";
+    fs.writeFileSync(outputFile, JSON.stringify(finalData, null, 3));
 
 } catch (error) {
     colorLog.error(error) && logger.error(error);

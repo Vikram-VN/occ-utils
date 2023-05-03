@@ -93,7 +93,7 @@
     "taxExemptionCode": null,
     "x_fleetNameJDE": null,
     "derivedType": null,
-    "allowPunchoutShopping": true,
+    "allowPunchoutShopping": false,
     "useAllShippingMethodsFromSite": null,
     "derivedTaxExemptionCode": null,
     "approvalRequired": false,

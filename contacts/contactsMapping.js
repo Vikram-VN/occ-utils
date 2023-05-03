@@ -5,10 +5,13 @@ const { colorLog: color, contactsLogger: logger } = require("../logs/colorLog");
 const colorLog = color();
 
 try {
-    // The fs module enables interacting with the file system in a way modeled on standard POSIX functions
+   
     // Reading data from the accounts and contacts
-    const accounts = JSON.parse(fs.readFileSync('./data/AccountsV2-DEV.json')).organization; // Exported accounts
-    const contacts = JSON.parse(fs.readFileSync('./data/accountsV2.json')); // Xls to json converted data
+
+    // Exported accounts from the OCC server
+    const accounts = JSON.parse(fs.readFileSync('./data/AccountsV2-DEV.json')).organization;
+    // Xls to json converted data (the old one, which we did it for accounts)
+    const contacts = JSON.parse(fs.readFileSync('./data/accountsV2.json'));
 
     // Temporarily storing data here, later on this will be saved into json file
     const finalData = { user: [] };
@@ -44,7 +47,8 @@ try {
         colorLog.info("Something went wrong with the input and output data, please check") && logger.error(finalData);
 
     // Saving the data into json file
-    fs.writeFileSync("./data/Profiles-new.json", JSON.stringify(finalData, null, 3));
+    const outputFile = "./data/Profiles-new.json";
+    fs.writeFileSync(outputFile, JSON.stringify(finalData, null, 3));
 
 } catch (error) {
     colorLog.error(error) && logger.error(error);
