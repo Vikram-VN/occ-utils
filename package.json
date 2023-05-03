@@ -4,9 +4,9 @@
   "description": "I am lazy",
   "main": "xlsToJson.js",
   "scripts": {
-    "convert-to-json": "node xlsToJson.js",
-    "account-map": "node ./accounts/accountsMapping.js",
-    "contact-map": "node ./contacts/contactsMapping.js"
+    "convert": "node xlsToJson.js",
+    "accounts": "node ./accounts/accountsMapping.js",
+    "contacts": "node ./contacts/contactsMapping.js"
   },
   "author": "",
   "license": "ISC",

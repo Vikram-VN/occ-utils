@@ -3,7 +3,7 @@ const fs = require("fs");
 
 // Reading data from the accounts and contacts
 const accounts = JSON.parse(fs.readFileSync('./data/AccountsV2_PRD.json')).organization; // Exported accounts
-const contacts = JSON.parse(fs.readFileSync('./data/Regular_non-punchout_accounts_that_are_both_refuse_and_mixer/accounts-non-punchout(one-to-many).json')); // Xls to json converted data
+const contacts = JSON.parse(fs.readFileSync('./data/newAccounts.json')); // Xls to json converted data
 
 // Temporarily storing data here, later on this will be saved into json file
 const finalData = { user: [] };
@@ -39,4 +39,4 @@ finalData.user = [...new Set(finalData.user)];
 console.log("Totoal records are: ", finalData.user.length);
 
 // Saving the data into json file
-fs.writeFileSync("./data/Regular_non-punchout_accounts_that_are_both_refuse_and_mixer/contacts-non-punchout(one-to-many).json", JSON.stringify(finalData, null, 3));
+fs.writeFileSync("./data/newContacts.json", JSON.stringify(finalData, null, 3));
