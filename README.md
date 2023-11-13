@@ -4,7 +4,7 @@
 * To run this script, NodeJS (https://nodejs.org/en/download) must be installed on your system.
 
 
-* First, we have to install `node_modules` by running `npm install.
+* First, we have to install required packages by running `npm install`.
 
 
 ## Accounts Import
